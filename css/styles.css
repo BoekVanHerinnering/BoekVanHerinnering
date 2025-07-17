@@ -1,0 +1,976 @@
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Spread buttons evenly */
+    gap: 10px; /* Adds spacing between buttons */
+    margin-top: 8px;
+}
+
+/* Styling for buttons */
+.back-button, .previous-button, .next-button {
+    flex: 1; /* Each button takes equal width */
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Individual button colors */
+.back-button {
+    background-color: black;
+}
+
+.previous-button {
+    background-color: black;
+}
+
+.next-button {
+    background-color: black;
+}
+
+/* Hover effects */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Custom Fonts for Headings */
+        h1 {
+            font-family: 'Georgia', serif; /* Change the font for h1 */
+            font-size: 30px;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Verdana', sans-serif; /* Change the font for h2 */
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+        }
+        h3 {
+            font-family: 'Times New Roman', serif; /* Change the font for h3 */
+            font-size: 12px;
+            color: #555;
+        }
+	h4 {
+            font-family: 'Times New Roman', serif; /* Change the font for h4 */
+            font-size: 12px;
+            color: black;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0px;
+            overflow-y: auto;
+
+        }
+        .page {
+            background: white;
+            padding: 1px;
+            border-radius: 10px;
+            box-shadow: 0px rgba(0);
+            width: 350px;
+            text-align: left;
+            
+
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: grey;
+        }
+        input {
+            width: 93%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .hidden {
+            display: none;
+        }
+
+
+        
+        .dark-mode {
+            background-color: #36454F;
+            color: white;
+	  }
+
+.dark-mode .page {
+  background-color: black;
+}
+
+
+.dark-mode h1 {
+color: white;
+}
+.dark-mode h2 {
+color: white;
+}
+.dark-mode h3 {
+color: white;
+}
+.dark-mode h4 {
+color: black;
+}
+
+.dark-mode .back-button {
+  background-color: grey;
+color: white;
+}
+.dark-mode .next-button {
+  background-color: grey;
+color: white;
+}
+.dark-mode .previous-button {
+  background-color: grey;
+color: white;
+}
+.dark-mode .sticky-header {
+  background-color: black;
+color: black;
+}
+.dark-mode .commentary {
+color: #D1ECE1
+}
+.dark-mode #searchResults {
+  background: #000000; 
+  color: black;
+}
+.dark-mode .accordion-panel {
+  background: #000000;
+}
+
+.dark-mode button {
+  background-color: grey;
+color: white;
+}
+
+
+.view-toggle {
+  margin: 10px 0;
+  text-align: center;
+}
+.view-toggle label {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.accordion-btn:hover { background: grey; }
+
+.accordion-panel {
+  padding: 5px 10px;
+  background: #f9f9f9;
+  border-left: 2px solid #007BFF;
+  margin-bottom: 10px;
+}
+.accordion-panel.hidden { display: none; }
+/* Add spacing between verses in accordion panels */
+.accordion-panel p {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f3f3f3;
+    border-left: 4px solid #007BFF;
+    border-radius: 5px;
+}
+.accordion-panel a {
+    font-size: 14px;
+    color: #000000;
+}
+.accordion-panel a:hover {
+    color: #000000;
+}
+
+
+#searchResults {
+    margin-top: 15px;
+    max-height: auto;
+    overflow-y: auto;
+}
+
+.search-result {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f3f3f3;
+    border-left: 4px solid #007BFF;
+    border-radius: 5px;
+}
+
+.search-result a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.search-result a:hover {
+    color: #000000;
+}
+
+
+       
+
+
+.notepad-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fffbe6;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.notepad-container h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+textarea#notepad {
+    width: 93%;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.notepad-container button {
+    margin-top: 10px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notepad-container button:hover {
+    background-color: #3e8e41;
+}
+
+.hidden {
+    display: none;
+}
+
+        
+
+
+
+.return-popup {
+    position: fixed;
+    bottom: 5px;
+    right: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: 100px;
+    font-size: 14px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.return-popup:hover {
+    opacity: 1;
+}
+
+.highlight-verse {
+    background-color: #b2b675;
+    transition: background-color 3s ease-in-out;
+}
+
+.fade-out {
+    background-color: transparent !important;
+    transition: background-color 10s ease-in-out;
+}
+
+
+
+
+
+
+
+ /* Sticky header for Genesis Chapter 1 */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+margin-left: -4px;
+margin-right: -6px;
+            background-color: white;
+            padding: 10px;
+            border-bottom: 2px solid #ddd;
+            z-index: 1; /* Ensures it stays on top */
+        }
+.commentary {
+    font-style: oblique;
+    color: #2b0505;
+    padding: 25px ;
+    margin-left: 20px;
+    padding-left: 0px;
+  text-align: center;
+font-size: 13px;
+text-decoration: underline;
+
+}
+
+
+a {
+    color: blue; /* Change to your preferred color */
+    font-size: 14px; /* Adjust the size as needed */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: green; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+font-size: 14px; /* Adjust the size as needed */
+}
+
+
+.dropdown-container {
+    position: relative;
+    margin-top: 5px;
+}
+
+.dropdown {
+    margin-top: 0px;
+    background: #ffffff;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative; /* ✅ Use relative so it flows naturally */
+    width: 310px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.button {
+    margin-left: 2px;
+    width: 99%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #585858;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.book-comment {
+    font-style: italic;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Specific colors if you want */
+#genésisComment {
+    color: #ff0000; /* Firebrick */
+    text-align: center;
+}
+#exodusComment {
+    color: #ff0000; /* Dodger Blue */
+    text-align: center;
+}
+#levitikusComment {
+    color: #ff0000; /* Green */
+    text-align: center;
+}
+#numeriComment {
+    color: #ff0000; /* Dark Orchid */
+}
+#deuteronómiumComment {
+    color: #ff0000; /* Dark Orange */
+}
+
+#jehowshuaComment {
+    color: blue ; /* Dark Red */
+    text-align: center;
+}
+#rigtersComment {
+    color: blue; /* Dark Magenta */
+    text-align: center;
+}
+#een_shemuelComment{
+    color: blue; /* Dark Cyan */
+    text-align: center;
+}
+#twee_shemuelComment {
+    color: blue; /* Dark Goldenrod */
+    text-align: center;
+}
+#een_koningsComment {
+    color: blue; /* Dark Olive Green */
+    text-align: center;
+}
+#twee_koningsComment {
+    color: blue; /* Dark Sea Green */
+    text-align: center;
+}
+#een_kroniekeComment {
+    color: blue; /* Dark Slate Blue */
+    text-align: center;
+}
+#twee_kroniekeComment {
+    color: blue; /* Dark Slate Gray */
+    text-align: center;
+}
+#opregteComment {
+    color: blue; /* Dark Turquoise */
+    text-align: center;
+}
+#een_makkabeersComment {
+    color: blue; /* Dark Violet */
+    text-align: center;
+}
+#twee_makkabeersComment {
+    color: blue; /* Deep Pink */
+    text-align: center;
+}
+#psalmsComment {
+    color: rgb(0, 165, 0);
+    text-align: center;
+}
+#spreuke_van_salomoComment {
+    color: rgb(0, 165, 0);
+    text-align: center;
+}
+#predikersComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#hooglied_van_salomoComment {
+    color: rgb(0, 165, 0);
+    text-align: center;
+}
+#wyshied_van_salomoComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#odes_van_salomoComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#die_wysheid_van_jehôwshua_ben_sirahComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#rutComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#juditComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#esterComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#tobiasComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#jobComment {
+    color: rgb(0, 165, 0); 
+    text-align: center;
+}
+#henogComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#openbaring_van_henogComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#jôwelComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#jonaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#amosComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#hoséaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#migaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#jeshajahComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#nahumComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#habakukComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#sefanjaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#jeremiaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#klaagliedere_van_jeremiaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#barugComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#esegiëlComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#daniëlComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#een_esraComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#twee_esraComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#esraComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#obadjaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#haggaiComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#sagariaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#nehemiaComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#maleagiComment {
+    color: rgb(247, 162, 5); 
+    text-align: center;
+}
+#jakobusComment {
+    color: Pink; 
+    text-align: center;
+}
+#thomasComment {
+    color: Pink; 
+    text-align: center;
+}
+#lukasComment {
+    color: Pink; 
+    text-align: center;
+}
+#mattithjahûwComment {
+    color: Pink; 
+    text-align: center;
+}
+#markusComment {
+    color: Pink; 
+    text-align: center;
+}
+#jehôwgananComment {
+    color: Pink; 
+    text-align: center;
+}
+#petrusComment {
+    color: Pink; 
+    text-align: center;
+}
+#nikodémus_deel_1Comment {
+    color: Pink; 
+    text-align: center;
+}
+#nikodémus_deel_2Comment {
+    color: Pink; 
+    text-align: center;
+}
+#handelinge_van_die_apostelsComment {
+    color: Pink; 
+    text-align: center;
+}
+#sendbriewe_van_abgarus_en_jahwèshuaComment {
+    color: Pink; 
+    text-align: center;
+}
+#hebreërsComment {
+    color: Pink; 
+    text-align: center;
+}
+#die_brief_van_jakobus_aan_jisraelieteComment {
+    color: Pink; 
+    text-align: center;
+}
+#eerste_brief_van_die_apostel_petrusComment {
+    color: Pink; 
+    text-align: center;
+}
+#tweede_brief_van_die_apostel_petrusComment {
+    color: Pink; 
+    text-align: center;
+}
+#eerste_brief_van_die_apostel_jehôwgananComment {
+    color: Pink; 
+    text-align: center;
+}
+#tweede_brief_van_die_apostel_jehôwgananComment {
+    color: Pink; 
+    text-align: center;
+}
+#derde_brief_van_die_apostel_jehôwgananComment {
+    color: Pink; 
+    text-align: center;
+}
+#judasComment {
+    color: Pink; 
+    text-align: center;
+}
+#openbaring_van_petrusComment {
+    color: Pink; 
+    text-align: center;
+}
+#openbaring_van_jahwèshuaComment {
+    color: Pink; 
+    text-align: center;
+}
+#jubileumComment {
+    color: Dark rgb(0, 0, 0); 
+    text-align: center;
+}
+#homepage {
+  position: relative;
+}
+
+/* Menu Toggle Button */
+#menuToggleBtn {
+  position: relative;
+  z-index: 100;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#menuToggleBtn:hover {
+  background-color: #919191;
+}
+
+/* MENU CONTAINER */
+#menu {
+  position: absolute;
+  top: 156px; /* below ☰ button */
+  left: center;
+  width: 320px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 5px solid #000000;   
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 199;
+  pointer-events: none; /* block clicks when hidden */
+}
+
+/* When showing the menu */
+#menu.show {
+  margin-bottom: 20px;
+  transform: scaleY(1);
+  opacity: 1;
+  pointer-events: auto; /* allow clicks */
+}
+
+
+/* Menu Item Buttons */
+.menu-item {
+ margin-left: 2px;
+  width: 99%;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  text-align: center;
+  border-radius: 5;
+  cursor: pointer;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item:hover {
+  background-color: #919191;
+}
+
+#menu .close-menu-btn {
+  background-color: #000000;
+  margin-left: 2px;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 99%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#menu .close-menu-btn:hover {
+  background-color: #919191;
+}
+
+
+.favorites-btn {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 99%;
+  margin-left: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.favorites-btn:hover {
+  background-color: #919191;
+  
+}
+
+
+#settingsDropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#settingsDropdown.show {
+  max-height: 200px; /* or whatever height fits your font slider */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup-menu {
+  position: fixed;
+  bottom: -300px;
+  left: center;
+  width: 50%;
+  background: white;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 20px;
+  z-index: 9999;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.popup-menu.show {
+  bottom: 0;
+  opacity: 1;
+}
+
+.popup-menu button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  background-color: #b6ac1d;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup-menu button:hover {
+  background-color: #2bff00;
+}
+
+.popup-menu button.cancel-btn {
+  background-color: #b6ac1d;
+  color: #000000;
+}
+.popup-menu button.cancel-btn:hover {
+  background-color: #2bff00;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.favorite-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.temp-highlight {
+  background-color: #fff8dc;
+  transition: background-color 1s ease;
+}
+
+.temp-highlight.fade-out {
+  background-color: transparent;
+}
+
+
+/* 🔆 Glow effect for verse */
+.glow {
+  box-shadow: 0 0 8px 3px gold;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+/* 📘 Torah (Genesis–Deuteronomy) */
+.torah-highlight {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196F3;
+}
+
+/* 📙 Prophets */
+.prophet-highlight {
+  background-color: #f3e5f5;
+  border-left: 4px solid #9C27B0;
+}
+
+/* 📗 Writings */
+.writing-highlight {
+  background-color: #fff3e0;
+  border-left: 4px solid #FF9800;
+}
+
+/* 📕 Gospels */
+.gospel-highlight {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+}
+
+/* 📒 Letters */
+.letter-highlight {
+  background-color: #ffebee;
+  border-left: 4px solid #F44336;
+}
+
+/* Optional: Dark mode adjustments */
+body.dark-mode .torah-highlight { background-color: rgba(33, 150, 243, 0.2); }
+body.dark-mode .prophet-highlight { background-color: rgba(156, 39, 176, 0.2); }
+body.dark-mode .writing-highlight { background-color: rgba(255, 152, 0, 0.2); }
+body.dark-mode .gospel-highlight { background-color: rgba(76, 175, 80, 0.2); }
+body.dark-mode .letter-highlight { background-color: rgba(244, 67, 54, 0.2); }
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.multi-selected {
+  background-color: rgba(255, 255, 0, 0.3); /* light yellow background */
+  border-left: 3px solid gold; /* subtle gold border */
+  box-shadow: none; /* no glow */
+}
+

@@ -1,0 +1,463 @@
+const nikodémus_deel_1Chapters = [
+
+{
+book: 'Nikodémus_deel_1',
+chapter: '1',
+content: [
+		
+"	1 IN die vyftiende jaar van die regering van Tiberius, keiser van die Romeine, en in die negentiende jaar van die regering van Herodes, koning van Galiléa, op die agtste dag voor die eerste dag van April, dit is die vyf‑en‑twintigste Maart, tydens die konsulaat van Rufus en Rubellio, in die vierde jaar van die twee-honderd-en‑tweede olimpiade, toe JôWsef Kájafas hoëpriester van die Jode was; wat Nikodémus, na die folterdood en die lyding van onse Meester JaHWèshua die Gesalfde, Verlosser en Elohim, aangeteken en nagelaat het in die Hebreeus aan die hoëpriester en die ander manne van JeHûWdah [lui as volg]:	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '2',
+content: [
+
+"	1 NADAT hulle saam beraadslaag het, het die hoëpriesters en wetsgeleerdes Annas en Kájafas en Senes en Datam en GamaliEl, Judas, Levi en Náftali, Alexander en Jaïrus en die orige Jode na Pilatus gekom en JaHWèshua van baie dinge beskuldig en gesê:	",
+"	1a Ons ken hierdie Man, dat Hy die seun van JôWsef die timmerman is, gebore uit Mirjam, en Hy sê dat Hy die Seun van Elohim en ‘n Koning is en daarby skend Hy die Sabbat en wil Hy die wet van ons vaders ontbind!	",
+"	1b Pilatus sê: En watter dinge is dit wat Hy doen waarmee Hy die wet wil ontbind? Die Jode sê: Ons het ‘n wet dat ‘n mens niemand op die Sabbat mag genees nie.	",
+"	1c Maar hierdie Man het deur duiwelskunste kreupeles en gebreklikes, verdordes en blindes en verlamdes, dowes en besetenes op die Sabbat genees!	",
+"	1d Pilatus sê vir hulle: Deur watter duiwelskunste?	",
+"	1e Hulle antwoord hom: Hy is ‘n towenaar en deur Beëlsebul, die owerste van die demone, werp Hy die demone uit, en hulle is almal aan Hom onderdanig.	",
+"	1f Pilatus sê vir hulle: Daar is nie so iets as die uitwerping van demone deur ‘n gees van besoedeling nie, maar deur die god Aesculapius.	",
+"	2 Die Jode sê toe vir Pilatus: Ons versoek u majesteit dringend dat Hy voor u regterstoel moet verskyn en verhoor word. En Pilatus roep hulle na hom en sê: Sê vir my, hoe kan ek wat ‘n goewerneur is, ‘n Koning in verhoor neem? Hulle sê vir hom: Ons sê nie dat Hy ‘n koning is nie, maar Hy sê dit van Homself.	",
+"	2a En Pilatus roep die bode en sê vir hom: Laat JaHWèshua hierheen gebring word, maar met beleefdheid.	",
+"	2b En die bode het uitgegaan en toe hy JaHWèshua sien, het hy Hom hulde bewys en die mantel wat oor sy hand was, geneem en op die Aarde oopgesprei en vir Hom gesê: Meester, tree hier op en gaan na binne, want die goewerneur roep U!	",
+"	2c En toe die Jode sien wat die bode gedoen het, roep hulle Pilatus toe en sê: Waarom het u Hom nie deur ‘n herout laat roep nie, maar deur ‘n bode?	",
+"	2d Want toe die bode Hom sien, het hy Hom hulde bewys en sy mantel op die Aarde oopgesprei en Hom daarop laat loop soos ‘n koning!	",
+"	3 Toe het Pilatus die bode geroep en vir hom gesê: Waarom het jy dit gedoen en jou mantel op die Aarde oopgesprei en JaHWèshua daarop laat loop?	",
+"	3a Die bode sê vir hom: Meester goewerneur, toe u my na Jerusalem na Alexander gestuur het, het ek JaHWèshua op ‘n esel sien sit, en die kinders van die Hebreërs het takke in hul hande gehad en het uitgeroep, en ander het hul klere onder Hom uitgesprei en gesê: Verlos nou, U wat in die hoogste [Hemele] is, geseën is Hy wat kom in die Naam van JaHWeH!	",
+"	4 Die Jode skree toe en sê vir die bode: Die kinders van die Hebreërs het in Hebreeus uitgeroep; hoe weet jy dit dan in Grieks?	",
+"	4a Die bode sê vir hulle: Ek het een van die Jode gevra en gesê: Wat is dit wat hulle daar uitroep in Hebreeus? en hy het dit aan my vertaal.	",
+"	4b Pilatus sê vir hulle: Hoe het hulle dit in Hebreeus gesê?	",
+"	4c Die Jode sê vir hom: Hosanna membrome baroechamma adonaï!	",
+"	4d Pilatus sê vir hulle: En die Hosanna en die orige, hoe vertaal ‘n mens dit?	",
+"	4e Die Jode antwoord hom: Verlos nou, U wat in die hoogste [Hemele] is, geseënd is Hy wat kom in die Naam van JaHWeH! [Psalm 118:26]	",
+"	4f Pilatus sê toe vir hulle: As julle self dan getuig dat dit die woorde is wat die kinders gesê het, waarin het die bode dan oortree? En hulle het stilgebly.	",
+"	4g En die goewerneur sê vir die bode: Gaan dan maar en bring Hom in op die manier wat jy goed dink.	",
+"	4h En die bode het uitgegaan en gedoen soos die vorige keer en vir JaHWèshua gesê: Meester, gaan binne, die goewerneur roep U!	",
+"	5 En toe JaHWèshua binnetree, en die vaandeldraers die vaandels vashou, het die vaandelkoppe gebuig en JaHWèshua vereer.	",
+"	5a En toe die Jode die houding van die vaandels sien, hoe hulle hul buig en JaHWèshua vereer, het hulle hardop na die vaandeldraers geskree.	",
+"	5b Pilatus sê vir die Jode: Verbaas julle jul nie daaroor dat die vaandelkoppe hulle gebuig en JaHWèshua vereer het nie?	",
+"	5c Die Jode sê vir Pilatus: Ons het gesien hoe die vaandeldraers hulle laat buig en Hom vereer het.	",
+"	5d En die goewerneur laat die vaandeldraers roep en sê vir hulle: Waarom het julle dit gedoen?	",
+"	5e Hulle sê vir Pilatus: Ons is Grieke en tempeldienaars, hoekom sou ons Hom vereer? Om die waarheid te sê, terwyl ons die vaandels vasgehou het, het hulle uit hulself gebuig en Hom vereer!	",
+"	6 Toe sê Pilatus vir die owerstes van die sinagoge en die oudstes van die volk: Kies julle nou bekwame, sterk manne en laat hulle die vaandels vashou, en laat ons sien of hulle uit hul eie sal buig.	",
+"	6a En die oudstes van die Jode het twaalf sterk en bekwame manne geneem en hulle ses‑ses die vaandels laat vashou en hulle voor die regbank van die goewerneur laat plek inneem. En Pilatus sê vir die bode: Neem Hom uit die geregsaal en bring Hom dan weer na binne op die wyse wat jy goeddink.	",
+"	6b En JaHWèshua het uit die geregsaal gegaan, Hy en die by Pilatus roep die manne tot hom wat tevore die vaandelkoppe vasgehou het, en sê vir hulle: Ek het gesweer by die welstand van die keiser dat as die vaandels hulle nie buig as JaHWèshua binnekom nie, dan laat ek julle koppe afkap!	",
+"	6c En die goewerneur beveel JaHWèshua om vir die tweede keer binne te kom.	",
+"	6d En die bode het gehandel op dieselfde wyse as die eerste keer en JaHWèshua ernstig versoek om oor sy mantel te loop.	",
+"	6e En Hy het daarop geloop en binnegegaan. En toe Hy binnetree, het die vaandels hulle weer gebuig en Hom vereer.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '3',
+content: [
+	
+"	1 TOE Pilatus dit sien, het hy bang geword en geprobeer om uit die regterstoel op te staan. En terwyl hy hom nog klaarmaak om op te staan, stuur sy vrou [‘n boodskap] na hom en sê:	",
+"	1a Moet tog niks te doen hê met hierdie regverdige Man nie, want ek het vannag baie gely om Sy ontwil.	",
+"	1b En Pilatus roep al die Jode na hom en sê vir hulle: Julle weet dat my vrou Elohim vrees en tot die Geloof van JeHûWdah geneë voel, saam met julle. Hulle sê vir hom: ja, ons weet dit! Pilatus sê vir hulle:	",
+"	1c Kyk, my vrou het na my gestuur en gesê: Moet tog niks met hierdie regverdige Man te doen hê nie, want ek het in die nag baie gely om Sy ontwil.	",
+"	1d Maar die Jode antwoord en sê vir Pilatus: Het ons nie vir u gesê dat Hy ‘n towenaar is nie? Kyk, Hy het ‘n droombeeld aan u vrou gestuur.	",
+"	2 En Pilatus roep JaHWèshua na hom toe en sê vir Hom: Wat is dit wat hierdie manne teen U getuig? Sê U niks nie?	",
+"	2a Maar JaHWèshua sê: As hulle nie mag gehad het nie, sou hulle niks gesê het nie, want elkeen het mag oor sy eie mond om suiwer of besoedel te spreek. Hulle sal dit self sien!	",
+"	3 En die oudstes van die Jode antwoord en sê vir JaHWèshua: Wat sal ons sien? Ten eerste, dat jy uit hoerery gebore is; ten tweede, dat jou geboorte te Betlehem tot uitroeiing van die kinders aanleiding gegee het; ten derde, dat jou vader JôWsef en jou moeder Mirjam na Egipte gevlug het omdat hulle geen vrymoedigheid voor die volk gehad het nie.	",
+"	4 Toe sê sommige vrome manne uit die Jode wat daar by gestaan het: Ons sê nie dat Hy uit hoerery gebore is nie, maar ons weet dat JôWsef Mirjam getrou het, en Hy is nie uit hoerery gebore nie!	",
+"	4a Pilatus sê vir die Jode wat gesê het dat Hy uit hoerery gebore is: Hierdie woord van julle is nie waar nie, want daar was ‘n huwelik, soos ook julle volksgenote hier sê. Annas en Kájafas sê vir Pilatus: Die hele menigte van ons roep uit dat Hy uit hoerery gebore is, en ons word nie geglo nie! Hierdie mense hier is Sy bekeerlinge en Sy studente.	",
+"	4b En Pilatus roep Annas en Kájafas na hom en sê vir hulle: Wat is bekeerlinge? Hulle antwoord hom: Hulle is van geboorte Grieke en nou is hulle JisraEliete.	",
+"	4c Toe sê hulle wat beweer het dat Hy nie uit hoerery gebore is nie, naamlik El-Azer, Asterius, Antonius, Jakobus, Amnes, Zenas, ShemuEl, Isak, Phineas, Crispus, Agrippa en Judas:	",
+"	4d Ons is geen bekeerlinge nie, maar ons is kinders van JisraEl en ons spreek die Waarheid. Want ons was self teenwoordig by die verlowing van JôWsef en Mirjam.	",
+"	5 En Pilatus roep die twaalf manne na hom wat gesê het dat Hy nie uit hoerery gebore is nie en sê vir hulle: Ek besweer julle by die welstand van die keiser: is dit waar wat julle gesê het dat Hy nie uit hoerery gebore is nie?	",
+"	5a Hulle sê vir Pilatus: Ons het ‘n wet dat ons nie mag sweer nie, omdat dit ‘n oortreding is. Maar hulle sal sweer dat dit nie is soos ons sê nie... en dan is ons die dood skuldig! Pilatus sê vir Annas en Kájafas: Het julle niks hierop te sê nie?	",
+"	5b Annas en Kájafas sê vir Pilatus: Hierdie twaalf wat sê dat Hy nie uit hoerery gebore is nie, word geglo; maar die hele menigte van ons beweer dat Hy uit hoerery gebore en ‘n towenaar is, en dat Hy sê dat Hy die Seun van Elohim en ‘n Koning is ‑ en ons word nie geglo nie!	",
+"	6 En Pilatus beveel die hele menigte om na buite te gaan, behalwe die twaalf manne wat gesê het dat Hy nie uit hoerery gebore is nie, en hy beveel ook dat JaHWèshua opsy geneem moet word.	",
+"	6a En Pilatus sê vir hulle: Om watter rede wil hulle Hom ter dood bring?	",
+"	6b Hulle sê vir Pilatus: Hulle is naywerig op Hom, omdat Hy op die Sabbat genees.	",
+"	6c Pilatus sê: Ter wille van ‘n goeie werk wil hulle Hom doodmaak?	",
+"	6d Hulle antwoord hom: Ja!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '4',
+content: [
+		
+"	1 EN vervul van toorn het Pilatus buite die regsaal gegaan en vir hulle gesê: Ek neem die son tot getuie dat ek geen skuld in hierdie Man vind nie.	",
+"	1a Die Jode antwoord en sê vir die goewerneur : As hierdie Man nie ‘n kwaaddoener was nie, sou ons Hom nie aan u oorgelewer het nie!	",
+"	1b En Pilatus sê: Neem julle Hom en oordeel Hom volgens julle wet!	",
+"	1c Die Jode sê vir Pilatus: Dit is ons nie geoorloof om iemand dood te maak nie.	",
+"	1d Pilatus sê: Aan julle het Elohim gesê dat julle nie mag doodmaak nie, maar wat dan van my?	",
+"	2 Pilatus gaan toe weer in die paleis van die goewerneur en roep JaHWèshua eenkant en sê vir Hom: Is U die koning van die manne van JeHûWdah?	",
+"	2a JaHWèshua antwoord en sê vir Pilatus: Sê u dit uit uself of het ander u dit van My gesê?	",
+"	2b Pilatus antwoord JaHWèshua: Is ek dan ook ‘n man van JeHûWdah? U volk en die owerpriesters het U aan my oorgelewer. Wat het U gedoen? JaHWèshua antwoord:	",
+"	2c My Koninkryk is nie van hierdie wêreld nie; as My Koninkryk van hierdie wêreld was, sou My dienaars geveg het, dat Ek nie aan die Jode oorgelewer word nie. Maar nou is My Koninkryk nie van hier nie.	",
+"	2d Pilatus sê vir Hom: Is U dan tog ‘n koning?	",
+"	2e JaHWèshua antwoord hom: U sê dat Ek ‘n Koning is. Hiervoor is Ek gebore en het Ek gekom ‑ dat elkeen wat uit die Waarheid is, My Stem kan hoor.	",
+"	2f Pilatus sê vir Hom: Wie is die Waarheid? JaHWèshua sê vir hom: Waarheid is uit die Hemele.	",
+"	Pilatus sê: Is daar nie Waarheid op Aarde nie?	",
+"	2g JaHWèshua sê vir Pilatus: U sien hoe hulle wat die Waarheid spreek, geoordeel word deur die wat mag het op Aarde.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '5',
+content: [
+		
+"	1 EN Pilatus laat JaHWèshua in die regsaal en gaan uit na die Jode en sê vir hulle:Ek vind geen skuld in Hom nie!	",
+"	1a Die Jode sê vir hom: Hierdie man sê: Ek kan hierdie Tempel afbreek en dit in drie dae weer opbou!	",
+"	1b Pilatus sê: Watter Tempel?	",
+"	1c Die Jode sê: Dié waaraan Salomo ses‑en‑veertig jaar gebou het, maar hierdie man sê dat hy dit sal afbreek en opbou in drie dae.	",
+"	1d Pilatus sê vir hulle: Ek is onskuldig aan die bloed van hierdie regverdige Man, julle kan toesien!	",
+"	1e Die Jode sê toe: Laat Sy bloed op ons en op ons kinders kom!	",
+"	2 En Pilatus roep die oudstes en die priesters en die Leviete na hom en sê in die geheim vir hulle:	",
+"	2a Moenie so maak nie! Want daar is niks waarvan julle Hom beskuldig wat die dood verdien nie, want julle beskuldiging gaan oor genesing en skending van die Sabbat.	",
+"	2b Die oudstes en die priesters en die Leviete sê: As iemand laster teen die keiser, is hy dan die dood skuldig of nie?	",
+"	2c Pilatus sê: Hy is die dood skuldig!	",
+"	2d Die Jode sê vir Pilatus: _As iemand die dood skuldig is as hy laster teen die keiser ‑ hierdie man het gelaster teen Elohim!	",
+"	3 Toe het Pilatus al die Jode beveel om uit die regsaal te gaan en JaHWèshua na hom geroep en vir Hom gesê: Wat sal ek met U maak?	",
+"	3a JaHWèshua sê vir Pilatus: Soos dit vir u gegee is!	",
+"	3b Pilatus sê: Hoe is dit gegee?	",
+"	3c JaHWèshua sê: Moshè en die Profete het geprofeteer aangaande My dood en opstanding. [Hosea 6:2]	",
+"	3d En die Jode wat staan en afluister, hoor dit en sê vir Pilatus:	",
+"	3e Wat hoef u nog meer te hoor van hierdie lastering?	",
+"	3f Pilatus sê vir die Jode: As hierdie woord laster is, neem julle Hom dan weens laster en bring Hom na jul sinagoge en oordeel Hom volgens julle wet!	",
+"	3g Die Jode sê vir Pilatus: Dit staan in ons wet dat as een adamiet teen ‘n ander adamiet oortree, verdien hy om veertig slae min een te ontvang, maar hy wat teen Elohim laster, moet met klippe gestenig word.	",
+"	4 Pilatus sê vir hulle: Neem julle Hom en wreek julle op Hom op die wyse wat julle verkies.	",
+"	4a Die Jode sê vir Pilatus: Ons wil dat Hy gefolter word!	",
+"	4b Pilatus antwoord: Hy verdien nie om gefolter te word nie!	",
+"	5 En toe die goewerneur rondkyk oor die skare Jode wat daar rondom staan, merk hy dat baie van die manne van JeHûWdah ween en hy sê:	",
+"	5a Die hele skare begeer nie dat Hy moet sterwe nie.	",
+"	5b Die oudstes van die Jode sê toe: Vir hierdie doel het die hele skare van ons hierheen gekom, dat Hy ter dood gebring moet word.	",
+"	5c Pilatus sê vir die Jode: Waarom moet Hy sterwe?	",
+"	5d Die Jode sê: Omdat Hy Homself Seun van Elohim en Koning genoem het!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '6',
+content: [
+		
+"	1 EN ‘n sekere Nikodémus, ‘n man van JeHûWdah, het voor die goewerneur gaan staan en gesê: Ek smeek u, vrome man, laat my toe om ‘n paar woorde te sê. Pilatus sê: Spreek!	",
+"	1a Nikodémus sê: Ek het aan die oudstes en die priesters en die Leviete en aan die hele menigte van Jode in die sinagoge gesê: Waarom stry julle met hierdie Man?	",
+"	1b Hierdie Man doen baie tekens en wonders wat geen adamiet gedoen het of ooit sal doen nie, laat Hom staan en versin geen boosheid teen Hom nie; as die tekens wat Hy doen, uit Elohim is, sal hulle bly staan, maar as hulle uit mense is, sal hulle tot niet gaan.	",
+"	1c Want waarlik, toe Moshè deur JaHWeH na Egipte gestuur is, het hy baie tekens gedoen wat JaHWeH hom beveel het om voor Farao, die koning van Egipte, te verrig; en daar was manne, dienaars van Farao, en hulle het ook nie min van die tekens gedoen wat Moshè gedoen het nie,	",
+"	1d en die Egiptenare het hulle vir gode gehou, hierdie Jannes en Jambres, maar aangesien die tekens wat hulle gedoen het nie uit JaHWeH was nie, het hulle omgekom en ook die wat in hulle geglo het. En nou, laat hierdie Man gaan, want Hy is nie die dood skuldig nie.’	",
+"	2 Die Jode sê vir Nikodemus: Jy het ‘n student van Hom geword en daarom kies jy party vir Hom.	",
+"	2a Nikodémus sê vir hulle: Het die goewerneur dan ook ‘n student van Hom geword en kies hy Sy party? Het die keiser Hom nie tot hierdie waardigheid aangestel nie?	",
+"	2b En die Jode was woedend en het hul tande gekners teen Nikodémus.	",
+"	2c Pilatus sê vir hulle: Waarom kners julle jul tande teen hom noudat julle die Waarheid gehoor het?	",
+"	2d Die Jode sê toe vir Nikodémus: Mag jy Sy Waarheid en Sy lot deel!	",
+"	2e Nikodémus antwoord: Amein, Amein! Mag ek dit deel soos julle gesê het!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '7',
+content: [
+		
+"	1 MAAR een van die manne van JeHûWdah het na vore getree en die goewerneur gevra om ‘n woord te mag spreek.	",
+"	1a Die goewerneur sê: As jy iets wil sê, praat! Toe sê die man van JeHûWdah:	",
+"	1b Agt‑en‑dertig jaar lank het ek in pyn op ‘n siekbed gelê. En toe JaHWèshua gekom het, is baie wat besete was of aan allerlei kwale siek gelê het, deur Hom genees, en ‘n paar jong manne het medelye met my gehad en my met bed en al gedra en na Hom gebring.	",
+"	1c En toe JaHWèshua my sien, was Hy met Ontferming bewoë en het tot my die woord gespreek: Neem jou bed op en loop!’ En ek het my bed opgeneem en geloop.	",
+"	1d Die Jode sê toe vir Pilatus: Vra hom watter dag dit was waarop hy genees is.	",
+"	1e Hy wat genees is, sê: Op die Sabbat.	",
+"	1f Die Jode sê: Het ons u u nie so gesê dat Hy op die Sabbat genees en demone uitwerp nie!	",
+"	2 En ‘n ander man van JeHûWdah het vorentoe gekom en gesê: Ek was blind gebore. Ek het stemme gehoor, maar geen gesig gesien nie; en toe JaHWèshua verbygaan, het ek hardop uitgeroep:	",
+"	2a Wees my barmhartig, Seun van Dawid!’ En Hy het Medelye met my gehad en Sy hande op my oë gelê en ek het onmiddellik my gesig gekry.	",
+"	3 En ‘n ander man van JeHûWdah het vorentoe gekom en gesê: Ek was krom, en met ‘n enkele woord het Hy my reguit gemaak. En ‘n ander het gesê: Ek was melaats, en met ‘n enkele woord het Hy my genees!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '8',
+content: [
+		
+"	1 EN ‘n sekere vrou met die naam Bernice het van ‘n afstand af uitgeroep en gesê: Ek was bloedvloeiende en het die soom van Sy kleed aangeraak, en die bloedvloeiing waaraan ek twaalf jaar gely het, het opgehou.	",
+"	1a Die Jode sê toe: Ons het ‘n wet dat ‘n vrou nie toegelaat word om getuienis te gee nie!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '9',
+content: [
+		
+"	1 EN sommige ander, ‘n hele menigte van manne en vroue, het uitgeroep en gesê: Hierdie Man is ‘n Profeet, en die demone is aan Hom onderworpe.	",
+"	1a Pilatus sê vir hulle wat gesê het dat die demone aan Hom onderworpe is: Hoe is dit dat jul leermeesters nie ook aan Hom onderworpe is nie?	",
+"	1b Hulle sê vir Pilatus: Ons weet nie!	",
+"	1c Ander sê toe: Hy het Lasarus wat dood was, na vier dae uit sy graf opgewek.	",
+"	1d En die goewerneur het van vrees gebewe en aan die hele skare van Jode gesê: Waarom wil julle onskuldige bloed vergiet?	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '10',
+content: [
+		
+"	1 EN nadat hy Nikodémus en die twaalf manne wat gesê het dat Hy nie uit hoerery gebore is nie tot Hom geroep het, sê hy vir hulle: Wat sal ek doen? Want daar kom oproer onder die volk! Hulle sê vir hom: Ons weet nie, laat hulle toesien!	",
+"	1a Toe roep Pilatus weer die hele menigte van die Jode na hom en sê: Julle weet dat julle ‘n gewoonte het dat by geleentheid van die Fees van die Ongesuurde Brode een gevangene vir julle losgelaat word.	",
+"	1b Ek het ‘n veroordeelde gevangene in die gevangenis, ‘n moordenaar met die naam Barábbas, en hierdie JaHWèshua wat voor julle staan, in wie ek geen skuld vind nie. Wie wil julle dat ek vir julle sal loslaat?	",
+"	1c En hulle roep uit: Barábbas! Pilatus sê toe: Wat sal ek doen met JaHWèshua wat genoem word die Gesalfde?	",
+"	1d Die Jode sê: Laat Hom gefolter word!	",
+"	1e En ander van die Jode sê: Jy is nie ‘n vriend van die keiser as jy hierdie Man loslaat nie, want Hy het Homself Seun van Elohim en Koning genoem; jy wil Hóm dus vir koning hê en nie die keiser nie!	",
+"	2 Maar Pilatus het hom vererg en vir die Jode gesê: Jul volk is altyd oproerig en kom in opstand teen jul weldoeners.	",
+"	2a Die Jode sê: Teen watter weldoeners?	",
+"	2b Pilatus antwoord: Volgens wat ek gehoor het, het jul Elohey julle uit Egipte uit ‘n sware slawerny gebring en julle veilig deur die see gelei soos oor droë grond en in die woestyn het Hy julle met manna gevoed en aan julle kwartels gegee en julle uit ‘n rots water gegee om te drink, en ‘n Wet het Hy aan julle gegee.	",
+"	2b En ondanks al hierdie dinge het julle jul Elohey vertoorn en ‘n gegote kalf geëis en jul Elohey verbitter, en Hy wou julle doodmaak, en Moshè het vir julle ingetree sodat julle nie ter dood gebring is nie. En nou beskuldig julle my dat ek die keiser haat!	",
+"	3 Hy staan toe op van sy regterstoel en wil gaan. En die Jode skreeu en sê: Ons erken as ons koning die keiser en nie JaHWèshua nie!	",
+"	3a Dit is wel so dat die wyse manne geskenke uit die Ooste aan Hom gebring het soos aan ‘n koning, en toe Herodes van die wyse manne verneem het dat ‘n koning gebore is, het hy probeer om Hom om die lewe te bring.	",
+"	3b En toe Sy vader JôWsef dit te wete gekom het, het hy Hom en Sy moeder geneem en na Egipte gevlug. En toe Herodes dit hoor, het hy die kinders van die Hebreërs wat in Betlehem gebore is, laat doodmaak.	",
+"	4 En toe Pilatus hierdie woorde hoor, het hy bang geword. En Pilatus het die skare stilgemaak, omdat hulle geskreeu het, en vir hulle gesê: So is dit dan Hy hierdie wat Herodes gesoek het?	",
+"	4a Die Jode antwoord: Ja, dit is Hy! En Pilatus het water geneem en sy hande voor die son gewas en gesê: Ek is onskuldig aan die bloed van hierdie regverdige Man; julle kan toesien!	",
+"	4b Toe roep die Jode weer uit: Laat Sy bloed kom op ons en op ons kinders!	",
+"	5 Toe beveel Pilatus dat die gordyn weggetrek word voor die regterstoel waarop hy gesit het en hy sê vir JaHWèshua: U volk het U daarvan beskuldig dat U koning is.	",
+"	5a Daarom bepaal ek as vonnis dat U eers volgens die verordening van die keisers, gegesel sal word, en dat U daarna aan die folterpaal gehang sal word, en dat die twee kwaaddoeners Dismas en Gestas saam met U gefolter word!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '11',
+content: [
+		
+"	1 EN JaHWèshua het uit die regsaal uitgegaan, en die twee kwaaddoeners saam met Hom. En toe hulle op die bestemde plek kom, het hulle Sy klere uitgetrek en Hom met ‘n linnedoek omgord en ‘n kroon van dorings op Sy hoof gesit.	",
+"	1a En hulle het Hom gefolter; so het hulle ook die twee kwaad-doeners opgehang.	",
+"	1b Maar JaHWèshua sê: Vader, vergeef hulle nie, want hulle weet wat hulle doen!	",
+"	1c En die soldate het die kledingstukke tussen hulle verdeel. [Psalm 22:18, Psalm 69:21-28; Lukas 23:34]	",
+"	1d En die volk het Hom staan en aanskou. En die owerpriesters en die owerstes het Hom gesmaad en gesê:	",
+"	1e Ander het Hy verlos, laat Hy homself verlos! As Hy die Seun van Elohim is, laat Hom afkom van die folterpaal!	",
+"	1f En die soldate het Hom ook bespot en gekom en Hom asyn met gal aangebied en gesê: As U die koning van die manne van JeHûWdah is, verlos Uself !	",
+"	1g En na die vonnis het Pilatus beveel dat Sy beskuldiging geskrywe word op ‘n opskrif in Griekse, Latynse en Hebreeuse letters, volgens wat die Jode gesê het dat Hy die Koning van die manne van JeHûWdah was.	",
+"	2 En een van die kwaaddoeners wat gehang is, spreek tot Hom en sê: As U die Gesalfde is, verlos Uself en ons! Maar Dismas antwoord en bestraf hom en sê:	",
+"	2a Vrees jy ook Elohim nie, terwyl jy in dieselfde oordeel is? En ons tog regverdiglik, want ons ontvang die verdiende loon vir ons dade, maar hierdie Man het niks verkeerds gedoen nie.	",
+"	2b En hy sê vir JaHWèshua: Dink aan my, Meester, in U Koninkryk!	",
+"	2c En JaHWèshua sê vir hom: Voorwaar, voorwaar, Ek sê vir jou, vandag sal jy met My in die Paradys wees!	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '12',
+content: [
+		
+"	1 EN dit was omtrent die sesde uur en daar het duisternis oor die Aarde gekom tot die negende uur toe, want die son is verduister; en die voorhangsel van die Tempel het middeldeur geskeur .	",
+"	1a En JaHWèshua het met ‘n luide stem uit geroep en gesê: Baddag efkid roeël, wat vertaal word:	",
+"	1b In U hande gee Ek My gees oor. En toe Hy dit gesê het, gee Hy die gees.	",
+"	1c En toe die hoofman oor honderd sien wat gebeur, het hy Elohim geprys en gesê:	",
+"	1d Hierdie Man was regverdig! En al die skares wat vir hierdie skouspel bymekaar was, het op hul borste geslaan toe hulle sien wat gebeur het en teruggegaan.	",
+"	2 Maar die hoofman oor honderd het by die goewerneur gaan rapporteer wat gebeur het, en toe die goewerneur en sy vrou dit hoor, was hulle baie ontsteld en het daardie dag nie geëet of gedrink nie.	",
+"	2a En Pilatus het die Jode ontbied en vir hulle gesê: Het julle gesien wat gebeur het? Maar hulle antwoord: Daar het ‘n sonsverduistering plaasgevind op die gewone manier!	",
+"	3 En Sy bekendes het ver weg gestaan, ook die vroue wat met Hom uit Galiléa gekom het, en het hierdie dinge gesien.	",
+"	3a Maar ‘n sekere man met die naam van JôWsef, ‘n lid van die Raad, uit die stad Arimathéa, wat self ook die Koninkryk van Elohim verwag het, het na Pilatus gegaan en die liggaam van JaHWèshua gevra; en hy het Hom afgehaal en in skoon linne toegedraai en Hom neergelê in ‘n graf wat uit rots gekap was waarin nog nooit iemand gelê het nie.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '13',
+content: [
+		
+"	1 MAAR toe die Jode hoor dat JôWsef die liggaam van JaHWèshua gevra het, het hulle na hom gesoek en ook na die twaalf wat gesê het dat JaHWèshua nie uit hoerery gebore was nie, en na Nikodémus en baie ander wat voor Pilatus verskyn het en van Sy goeie werke getuig het.	",
+"	1a Maar almal het hulle versteek en net Nikodémus is deur hulle gesien omdat hy ‘n owerste van die Jode was. En Nikodémus sê vir hulle: Hoe het julle in die sinagoge gekom?	",
+"	1b Die Jode sê vir hom: Hoe het jy in die sinagoge gekom? Want jy is Sy bondgenoot en Sy deel is met jou in die toekomende eeu! Nikodémus antwoord: Amein! Amein!	",
+"	1c Net so het JôWsef ook na vore gekom en vir hulle gesê: Waarom neem julle my dit kwalik dat ek die Liggaam van JaHWèshua gevra het? Kyk, ek het Hom in my nuwe graf gelê, toegedraai in skoon linne, en ek het ‘n steen voor die ingang van die grafspelonk gerol.	",
+"	1d En julle het nie reg gehandel met die Regverdige nie, want julle het geen berou gehad dat julle Hom gefolter het nie, maar Hom ook met ‘n spies deursteek.	",
+"	1e Toe pak die Jode JôWsef en gee opdrag dat hy in veilige bewaring gehou moet word tot die eerste dag van die week, en hulle sê vir hom:	",
+"	1f Weet dat die tyd ons nie toelaat om teen jou op te tree nie, want die Sabbat breek aan, maar weet ook dat jy geen begrafnis werd geag sal word nie, maar dat ons jou vlees aan die voëls van die Hemele sal gee. JôWsef sê vir hulle:	",
+"	1g Dit is mos die woord van die hovaardige Goliat wat die lewende Elohim en Dawid, die aparte, uitgetart het.	",
+"	1h Want Elohim sê deur die profeet: Aan My kom die wraak toe; Ek sal vergelde, sê JaHWeH. En kyk, nou het iemand wat na die vlees onbesnede was, maar besnede van hart, water geneem en sy hande voor die son gewas en gesê: Ek is onskuldig aan die bloed van hierdie regverdige man, julle kan toesien.	",
+"	1j En julle het Pilatus geantwoord en gesê: Laat Sy bloed kom op ons en op ons kinders!’ En nou vrees ek dat die Woede van JaHWeH gaan kom oor julle en julle kinders, soos julle gesê het.	",
+"	1k Maar toe die Jode hierdie woorde hoor, het hulle verbitterd in hul siel geword en JôWsef gegryp en geneem en in ‘n huis opgesluit waarin daar geen venster was nie, en wagte is voor die deur geplaas. En hulle het die deur verseël waarin JôWsef opgesluit was.	",
+"	2 En op die Sabbat het die owerstes van die sinagoge en die priesters en die Leviete ‘n bepaling verorden dat almal op die eerste dag van die week in die sinagoge moet verskyn.	",
+"	2a En die hele menigte het vroeg opgestaan en in die sinagoge beraadslaag met hoedanige dood hulle hom ter dood sou bring. En toe die Raad in sitting was, het hulle opdrag gegee dat hy met veel oneer binnegebring moes word.	",
+"	2b En toe hulle die deur oopgemaak het, vind hulle hom nie. En die hele volk was dronkgeslaan en verbaas omdat hulle die seëls verseël gevind het en Kájafas die sleutel gehad het.	",
+"	2c En hulle het dit nie langer gewaag om hul hande te slaan aan hulle wat voor Pilatus ten behoewe van JaHWèshua gespreek het nie.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '14',
+content: [
+	
+"	1 EN terwyl hulle nog in die sinagoge sit en hulle oor JôWsef verwonder kom sommige van die wagte, wat die Jode van Pilatus gevra het om die graf van JaHWèshua te bewaak sodat Sy studente nie miskien kom en Hom steel nie.	",
+"	1a En hulle praat en vertel aan die owerstes van die sinagoge en die priesters en die Leviete wat gebeur het, hoe daar ‘n groot aardbewing plaasgevind het, en ons sien ‘n Boodskapper neerdaal van die Hemele en Hy het die steen van die ingang van die graf af weggerol en daarop gaan sit.	",
+"	1b En Hy het geskyn soos sneeu en soos weerlig, en ons was baie beangs en het soos dooie mense gelê. En ons hoor die stem van die Boodskapper wat spreek met die vroue wat by die graf vertoef het:	",
+"	1c Moenie vrees nie! Want ek weet julle soek JaHWèshua wat gefolter is. Hy is nie hier nie, Hy het opgestaan, soos Hy gesê het.	",
+"	1d Kom kyk na die plek waar JaHWèshua gelê het en gaan gou terug en sê vir Sy studente dat Hy opgestaan het uit die dode, en in Galiléa is!	",
+"	2 Die Jode sê: Met watter vroue het hy gespreek? Die wagte sê: Ons weet nie wie hulle was nie. Die Jode sê: Op watter uur was dit?	",
+"	2a Die wagte sê: Om middernag. Die Jode sê: En waarom het julle die vroue nie gevang nie?	",
+"	2b Die wagte sê: Ons was soos dooies van vrees en het nie verwag om die lig van die dag weer te sien nie, hoe kon ons hulle dan nog vang?	",
+"	2c Die Jode sê: So waar as Elohim leef, ons glo julle nie!	",
+"	2d Die wagte sê vir die Jode: Julle het so baie tekens gesien in die geval van daardie Man en nie geglo nie, hoe sal julle ons dan glo? Baie tereg het julle gesweer: So waar as Elohim leef! want Hy leef inderdaad!	",
+"	2e Weer sê die wagte: Ons het gehoor dat julle hóm opgesluit het wat die liggaam van JaHWèshua gevra het en dat julle die deur verseël het, en toe julle dit oopmaak, julle hom nie gevind het nie.	",
+"	2f Gee julle dan vir JôWsef [wat julle bewaak het], en ons sal JaHWèshua vir julle gee!	",
+"	2g Die Jode sê: JôWsef het vertrek na sy eie stad.	",
+"	2h Die wagte sê aan die Jode: En JaHWèshua het opgestaan, soos ons die Boodskapper hoor sê het, en Hy is in Galiléa.	",
+"	3 En toe die Jode hierdie woorde hoor, het hulle baie bevrees word en gesê: Hierdie verhaal moenie gehoor word nie, anders voeg almal hulle by JaHWèshua.	",
+"	3a En die Jode het beraadslaag en baie geld bymekaar gebring en dit aan die soldate aangebied en gesê: Julle moet sê:	",
+"	3b Terwyl ons geslaap het, het die studente in die nag gekom en Hom gesteel. En as dit deur die goewerneur gehoor word, sal ons hom tevrede stel en maak dat julle sonder bekommernis is.	",
+"	3c En hulle het die geld geneem en gedoen soos hulle geleer was.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '15',
+content: [
+		
+"	1 EN ‘n sekere priester Phineas, en Addas, ‘n leraar, en Aggaeus, ’n Leviet, het van Galiléa na Jerusalem gekom en aan die owerstes van die sinagoge en die priesters en Leviete gesê:	",
+"	1a Ons het JaHWèshua en Sy studente sien sit op die berg wat Mamilch genoem word, en Hy het vir Sy studente gesê: Hy wat glo en hom laat was/doop, sal gered word; maar hy wat nie glo nie, sal veroordeel word.	",
+"	1b En vir hulle wat geglo het sal hierdie tekens volg: in My Naam sal hulle demone uitdryf, met nuwe tale sal hulle spreek, slange sal hulle opneem; en as hulle iets dodeliks drink, sal dit hulle geen skade doen nie; op siekes sal hulle die hande lê, en hulle sal gesond word.	",
+"	1c En terwyl JaHWèshua nog spreek met Sy studente, sien ons dat Hy opgeneem word na die Hemele.	",
+"	2 Die oudstes en die priesters en die Leviete sê: Gee Eer aan die Elohey van JisraEl en lê voor Hom getuienis af of julle waarlik hierdie dinge gesien en gehoor het wat julle ons vertel het.	",
+"	2a Die wat dit vertel het, sê toe: So waar as die Elohey van ons vaders Abraham, Isak en Jakob lewe, ons het hierdie dinge gehoor en ons het gesien dat Hy na die Hemele opgeneem is.	",
+"	2b Die oudstes en die priesters en die Leviete sê vir hulle: Het julle gekom met die doel om dit vir ons te sê, of het julle gekom om jul geloftes aan Elohim te betaal?	",
+"	2c En hulle antwoord: Om ons geloftes aan Elohim te betaal.	",
+"	2d Die oudstes en die owerpriesters en die Leviete sê vir hulle: As julle gekom het om jul geloftes aan Elohim te betaal, waarom dan die ydele praatjies wat julle voor die hele volk gebabbel het?	",
+"	2e Phineas, die priester, en Addas, die leraar, en Aggaeus, die Leviet, sê vir die owerstes van die sinagoge en priesters en Leviete: As die woorde wat ons gespreek en gesien het, ‘n oortreding is, kyk, ons staan voor julle, doen aan ons wat goed is in jul oë.	",
+"	2f En hulle het die wet geneem en hulle laat sweer dat hulle aan niemand meer hierdie woorde sou vertel nie, en hulle het hulle te ete en te drinke gegee en hulle uit die stad laat gaan; en hulle het hulle ook geld gegee en drie manne om met hulle saam te gaan en hulle op hul pad teruggestuur tot in Galiléa, en hulle het in vrede vertrek.	",
+"	3 En toe hierdie manne na Galiléa vertrek het, het die owerpriesters en die owerstes van die sinagoge en die oudstes saamgekom in die sinagoge, die poort gesluit en met ‘n groot weeklag geweeklaag en gesê: Wat ‘n Teken het aan JisraEl geskied!	",
+"	3a Maar Annas en Kájafas het gesê: Waarom is julle ontroerd? Waarom ween julle?	",
+"	3b Weet julle nie dat Sy studente baie geld aan die wagte van die graf gegee het en hulle onderrig het om te sê dat ‘n Boodskapper neergedaal en die steen voor die ingang van die graf weggerol het nie?	",
+"	3c Maar die priesters en die oudstes sê: Laat dit so wees dat Sy studente Sy liggaam gesteel het, maar hoe het Sy siel dan weer in Sy liggaam ingegaan en hoe vertoef Hy dan in Galiléa?	",
+"	3d Maar hulle kon hierop nie antwoord nie en het eindelik maar gesê: Dit is ons nie geoorloof om die onbesnedenes te glo nie!	",
+		
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '16',
+content: [
+		
+"	1 EN Nikodémus het opgestaan en voor die Raad gestaan en gesê: Julle het reg gesê. Weet julle nie, volk van Elohim, dat die manne wat van Galiléa gekom het, Elohim vrees nie, manne van welstand wat bedrog haat, manne van Vrede?	",
+"	1a En hulle het julle onder eed gesê: Ons het JaHWèshua op die berg Mamilch gesien saam met Sy studente, en dat Hy hulle alles geleer het wat julle van hulle gehoor het, en [hulle sê], ons het gesien dat Hy na die Hemele opgeneem is. En niemand het hulle gevra op watter manier Hy opgeneem is nie.	",
+"	1b Want so het die Boek van die Skrifte van Apartheid ons geleer dat EliJaHûW ook na die Hemele opgeneem is. EliShua het met ‘n luide stem geroep, en EliJaHûW het sy harige mantel op EliShua gewerp, en EliShua het die mantel op die Jordaan gewerp en daardeur getrek en na Jerigo gegaan.	",
+"	1c En die profete‑seuns het hom ontmoet en gesê: EliShua, waar is u meester EliJaHûW?’ En hy het gesê dat hy na die Hemele opgeneem is.	",
+"	1d En hulle sê vir EliShua: Het die Gees hom weggeruk en op een van die berge gewerp? [2 Konings 2]	",
+"	1e Maar laat ons ons seuns met ons neem en hom gaan soek. En hulle het EliShua omgepraat, en hy het met hulle gegaan en hulle het hom drie dae lank gesoek en hom nie gekry nie, en hulle het geweet dat hy opgeneem was.	",
+"	1f En nou, luister na my, en laat ons deur die hele gebied van JisraEl stuur en sien of die Gesalfde nie deur ‘n Gees opgeneem is en op een van die berge gewerp is nie.	",
+"	1g En hierdie woord het by almal byval gevind en hulle het in die hele gebied van JisraEl gestuur en JaHWèshua gesoek en Hom nie gevind nie.	",
+"	1h Maar hulle het JôWsef gevind te Arimathéa, en niemand het gewaag om die hand aan hom te slaan nie.	",
+"	2 Hulle berig toe aan die oudstes en die priesters en die Leviete: Ons het deur al die gebiede van JisraEl gegaan en ons het JaHWèshua nie gevind nie, maar ons het JôWsef in Arimathéa gevind.	",
+"	2a En toe hulle van JôWsef hoor, het hulle hulle verheug en Eer aan die Elohey van JisraEl gegee. En die owerstes van die sinagoge en die priesters en die Leviete het beraadslaag hoe hulle JôWsef sou ontmoet en hulle het ‘n vel papier geneem en aan JôWsef hierdie woorde geskrywe:	",
+"	2b Vrede vir u! Ons weet dat ons oortree het teen Elohim en teen u, en ons het tot die Elohey van JisraEl gebid dat u sal inwillig om na u vaders en u kinders te kom omdat ons almal bedroef is. Want toe ons die deur oopgemaak het, het ons u nie gevind nie.	",
+"	2c En ons weet dat ons boosheid teen u bedink het, maar Elohim het u bygestaan en Elohim self het ons voorneme teen u verydel, vader JôWsef, wat by die hele volk hooggeëerd is.	",
+"	3 En hulle het uit die hele JisraEl sewe manne gekies, vriende van JôWsef, wat deur JôWsef self ook as sy vriende erken is, en die owerstes van die sinagoge en die priesters en die Leviete het vir hulle gesê:	",
+"	3a Kyk as hy ons brief ontvang en dit lees, weet dan dat hy met julle na ons toe sal kom; maar as hy dit nie lees nie, weet dan dat hy kwaad is vir ons en groet Hom in vrede en keer na ons terug! En hulle seën die manne en laat hulle gaan.	",
+"	3b En die manne het by JôWsef gekom en hulle in eerbied voor hom gebuig en gesê: Vrede vir u! En hy sê: Vrede vir julle en vir die hele volk van JisraEl!	",
+"	3c En hulle oorhandig hom die blad van die brief, JôWsef neem hom en lees hom, vou die brief toe en prys Elohim en sê: Geloof sy JaHWeH my Elohey wat JisraEl bewaar het van onskuldige bloed te vergiet en geloof sy Elohim wat Sy Boodskapper uitgestuur en my onder Sy Vleuels gedek het. En hy rig ‘n tafel aan vir hulle, en hulle het geëet en gedrink en daar geslaap.	",
+"	4 En hulle het vroeg opgestaan en gebid. En JôWsef het sy eselin opgesaal en met die manne saamgegaan, en hulle het in Jerusalem gekom.	",
+"	4a En die hele volk het JôWsef tegemoet gekom en geroep: Vrede vir u by u intog!	",
+"	4b En hy sê vir die hele volk: Vrede vir julle! En hy het hulle gekus. En die volk het met JôWsef gebid en hulle was verbaas om hom te sien.	",
+"	4c En Nikodémus het hom in sy huis ontvang en ‘n groot feesmaal voorberei, en hy het Annas en Kájafas en die oudstes en die priesters en die Leviete na sy huis genooi.	",
+"	4d En hulle was vrolik en het met JôWsef geëet en gedrink. En nadat hulle ‘n loflied gesing het, het elkeen huistoe gegaan. Maar JôWsef het in die huis van Nikodémus gebly.	",
+"	5 En op die volgende dag, wat die voorbereiding was, het die owerstes van die sinagoge en die priesters en die Leviete vroeg opgestaan na die huis van Nikodémus gekom, en Nikodémus het hulle ontmoet en gesê:	",
+"	5a Vrede vir julle! En hulle sê: Vrede vir u en vir JôWsef, vir u hele huis en JôWsef se hele huis! En hy neem hulle in sy huis.	",
+"	5b En die hele Raad het gaan sit, en JôWsef het tussen Annas en Kájafas plek ingeneem. En niemand het dit gewaag om ‘n woord tot hom te spreek nie.	",
+"	5c En JôWsef sê: Waarom het julle my laat roep? Maar hulle wenk vir Nikodémus dat hy met JôWsef moet praat.	",
+"	5d En Nikodémus maak sy mond oop en sê vir JôWsef: Vader, u weet dat die geëerde leermeesters en die priesters en die Leviete van u graag ‘n woord wil verneem.	",
+"	5e En JôWsef sê: Ondervraag my maar!	",
+"	5f En Annas en Kájafas neem die Wet en laat JôWsef sweer en sê: Gee Eer aan die Elohey van JisraEl en lê voor Hom getuienis af. Want Agan, toe hy voor die profeet JeHôWshua moes sweer, het nie meineed gepleeg nie, maar hom alles vertel en geen enkele woord van hom verberg nie.	",
+"	5g Verberg u dan ook geen enkele woord vir ons nie!	",
+"	5h En JôWsef sê: Ek sal vir u geen enkele woord verberg nie.	",
+"	5i En hulle sê vir Hom: Dit het ons erg teen die bors gestuit dat u die liggaam van JaHWèshua gevra en in skoon linne toegedraai en in ‘n graf neergelê het.	",
+"	5j Daarom het ons u ter bewaring geplaas in ‘n huis waarin daar geen venster was nie, en ons het slotte en seëls aan die deure gesit, en wagte het die plek bewaak waar u opgesluit was.	",
+"	5k En op die dag ná die Sabbat het ons dit oopgemaak en u nie daar gevind nie en ons was hewig ontsteld, en verbystering het die hele volk van Elohim oorval tot gister toe. Kom nou en vertel ons wat daar met u gebeur het.	",
+"	6 En JôWsef sê: Op die dag van die voorbereiding, teen ongeveer die tiende uur, het julle my opgesluit en so het ek die hele Sabbat gebly.	",
+"	6a En teen middernag toe ek staan en bid het, is die huis waarin julle my opgesluit het aan sy vier hoeke opgelig, en het ek ‘n lig soos ‘n bliksemstraal in my oë gesien. Beangs het ek op die Aarde neergeval.	",
+"	6b En iemand gryp my aan die hand en verwyder my van die plek waar ek geval het, en die vog van water is oor my uitgestort van my hoof tot by my voete, en die geur van welriekende salf het in my neusgate gekom.	",
+"	6c En Hy het my gesig afgevee en my gekus en gesê: Moenie vrees nie, JôWsef; maak oop jou oë en kyk Wie dit is wat met jou praat.	",
+"	6d En ek het opgekyk en JaHWèshua gesien en ek het gebewe en gedink dat Hy ‘n spook was, en ek het die Gebooie opgesê en Hy het haar saam met my opgesê.	",
+"	6e En julle is nie onkundig daaromtrent nie dat ‘n spook, as hy ‘n mens teëkom en die Gebooie hoor, onmiddellik die wyk neem. En toe ek merk dat Hy hulle saam met my opsê, sê ek vir Hom: Rabbi(leermeester) EliJaHûW!	",
+"	6f En Hy sê vir my: Ek is nie EliJaHûW nie!	",
+"	6g Ek sê toe vir Hom: Wie is U, Meester?	",
+"	6h En Hy sê vir my: Ek is JaHWèshua, Wie se liggaam jy van Pilatus gevra het, en jy het My toegedraai in skoon linne en My Aangesig met ‘n sweetdoek bedek,	",
+"	6i en My in jou nuwe graf gelê en ‘n groot steen voor die ingang van die graf gerol.	",
+"	6j En ek sê vir Hom wat met my spreek: Toon my die plek waar ek U gelê het.	",
+"	6k En Hy bring my en wys my die plek waar ek Hom gelê het, en die linnekleed het daarin gelê en die doek wat op Sy Aangesig was.	",
+"	6l En ek wis dat dit JaHWèshua was. En Hy neem my by die hand en sit my in my eie huis hoewel die deure gesluit was, en Hy lê my op my bed neer en sê vir my: Vrede vir jou!’	",
+"	6m En Hy kus my en sê vir my: Moenie uit jou huis gaan vóór veertig dae [verby is] nie, want kyk, Ek gaan na my broers in Galiléa.	",
+
+]
+},
+{
+book: 'Nikodémus_deel_1',
+chapter: '17',
+content: [
+	
+"	1 EN toe die owerstes van die sinagoge en die priesters en die Leviete hierdie woorde van JôWsef hoor, het hulle soos dooies geword en op die Aarde geval en hulle het gevas tot op die negende uur.	",
+"	1a En Nikodémus het met JôWsef vir Annas en Kájafas en die priesters en die Leviete bemoedig en gesê: Staan op, staan op jul voete en eet brood en versterk jul siele, want môre is dit die Sabbat van JaHWeH.	",
+"	1b En hulle het opgestaan en tot JaHWeH gebid en geëet en gedrink, en elkeen het na sy huis teruggekeer.	",
+"	2 En op die Sabbat het die leraars en die priesters en die Leviete gesit en mekaar ondervra en gesê: Wat vir ‘n toorn is dit wat oor ons gekom het? Want ons ken tog Sy vader en Sy moeder.	",
+"	2a Die leraar Levi sê toe: Ek weet dat Sy ouers Elohim vrees en nie hul Geloftes nagelaat het nie en drie keer per jaar hul tiendes afgegee het.	",
+"	2b En toe JaHWèshua gebore is, het Sy ouers Hom na hierdie plek gebring en slagdiere en brandoffers aan Elohim gegee.	",
+"	2c En toe die groot leraar Simeon Hom in Sy arms geneem het, het hy gesê:	",
+"	2d Nou laat U, JaHWeH, u dienskneg gaan in Vrede, omdat my oë U Verlossing gesien het,	",
+"	2e wat U berei het voor die oë van al die volke, die Lig tot verligting van die nasies en tot Glansrykheid van U volk JisraEl. [Lukas 2:32]	",
+"	2f En Simeon het Hom geseën en vir Sy moeder Mirjam gesê: Ek verkondig jou ‘n goeie boodskap oor hierdie Kind.	",
+"	2g En Mirjam sê: Goed, my meester? En Simeon sê vir haar: Goed!	",
+"	2h Kyk, Hy is bestem tot ‘n val en opstanding van baie in JisraEl en ‘n Teken wat weerspreek sal word, en ‘n swaard sal deur jou eie siel gaan, sodat die gedagtes uit baie harte openbaar kan word.	",
+"	3 Hulle sê toe vir die leraar Levi: Hoe weet jy hierdie dinge?	",
+"	3a Levi sê vir hulle: Weet julle nie dat ek by Hom die Wet geleer het nie?	",
+"	3b Die Raad sê vir hom: Ons sal graag jou vader wil sien.	",
+"	3c En hulle laat haal Sy vader en vra hom daarna, en hy sê vir hulle:	",
+"	3d Waarom het julle my seun nie geglo nie? Die geseënde en regverdige Simeon self het hom die Wet geleer.	",
+"	3e Die Raad sê: Rabbi(leermeester) Levi, is die woord wat jy gespreek het, waar?	",
+"	3f En hy sê: Dit is waar!	",
+"	3g Toe het die owerstes van die sinagoges en die priesters en die Leviete onder mekaar gesê: Kom, laat ons stuur na Galiléa, na die drie manne wat gekom en ons van Sy leer en hemelvaart vertel het, en laat hulle ons sê hoe hulle Hom sien opvaar het.	",
+"	3h En die woord het hulle almal aangestaan, en hulle stuur die drie manne wat voorheen reeds met hulle na Galiléa gegaan het en sê vir hulle: Sê vir rabbi (leermeester) Addas en rabbi(leermeester) Phineas en rabbi (leermeester) Aggaeus:	",
+"	3i Vrede vir julle en almal wat met julle is! Aangesien daar in die Raad ‘n groot ondersoek aan die gang is, is ons na julle gestuur om julle te ontbied na Jerusalem.	",
+"	4 En die manne het na Galiléa gegaan en hulle gevind waar hulle die Wet sit en bestudeer en hulle in vrede gegroet.	",
+"	4a En die manne wat in Galiléa was, sê vir dié wat na hulle gekom het: Vrede vir die hele JisraEl!	",
+"	4b En hulle sê: Vrede vir julle! En hulle sê vir hulle: Waarvoor het julle gekom?	",
+"	4c En die wat gestuur is, antwoord: Die Raad laat julle roep na Jerusalem.	",
+"	4d En toe die manne hoor dat hulle deur die Raad ontbied is, het hulle tot Elohim gebid en met die manne aan tafel gaan sit en geëet en gedrink, en hulle het opgestaan en in Vrede na Jerusalem gegaan.	",
+"	5 En die volgende dag het die Raad in die sinagoge vergader. En hulle het hulle ondervra en gesê:	",
+"	5a Het julle werklik vir JaHWèshua sien sit op die berg Mamilch besig om Sy elf studente te onderrig, en het julle Hom sien opgaan na die Hemele?	",
+"	5b En die manne antwoord en sê: Net soos ons Hom sien opvaar het, so het ons dit aan julle vertel;	",
+"	6 Annas sê: Skei hulle van mekaar, en laat ons sien of hul woord ooreenstem!	",
+"	6a En hulle het hulle van mekaar geskei en eerste vir Addas ingeroep en vir hom gesê: Hoe het jy JaHWèshua sien opvaar?	",
+"	6b Addas sê: Terwyl Hy op die berg Mamilch gesit en Sy studente geleer het, sien ons die Wolkkolom wat Hom en Sy studente oorskadu, en die Wolkkolom het Hom opgeneem na die Hemele, en Sy studente het op hul aangesig op die Aarde gelê.	",
+"	6c En hulle roep Phineas die priester en ondervra hom ook en sê: Hoe het jy JaHWèshua sien opvaar?	",
+"	6d En hy het dit op dieselfde wyse vertel. En toe vra hulle Aggaeus, en hy sê dit ook op dieselfde wyse.	",
+"	6e En die Raad sê: Dit is in die Wet van Moshè bepaal: Uit die mond van twee of drie, sal elke woord van krag wees! [Deuteronómium 19:15]	",
+"	6f Die leraar Abuthem sê toe: Dit staan in die Wet geskrywe: Henog het gewandel met Elohim en was nie meer nie, want JaHWeH het hom weggeneem. [Génesis 5:24]	",
+"	6g Jaïrus, die leraar, sê: Ons het ook gehoor van die dood van Moshè, en ons het hom nie gesien nie. Want in die Wet van JaHWeH staan geskrywe:	",
+"	6h En Moshè het gesterf volgens die Woord van JaHWeH, en [niemand het tot vandag toe Sy graf geken nie. [Deuterónomium 34:5]’	",
+"	6i En rabbi Levi sê: Waarom het rabbi Simeon toe hy JaHWèshua sien, gesê: Kyk, Hy is bestemd tot ‘n val en ‘n opstanding van baie in JisraEl en tot ‘n Teken wat weerspreek sal word? [Lukas 2:34]	",
+"	6j En rabbi Isak sê: Daar staan geskrywe in die Wet: Ek stuur My Boodskapper voor U aangesig, wat voor U sal uitgaan om U te bewaar op elke goeie weg, omdat MY Naam daaroor uitgeroep is. [JeshaJaHûW 40:3, Maleagi 3:1]	",
+"	7 Toe sê Annas en Kájafas: Tereg het julle gesê wat daar in die Wet van Moshé geskrywe staan, dat geen adamiet die dood van Henog aanskou het, en dat geen adamiet die dood van Moshé genoem het nie.	",
+"	7a Maar JaHWèshua het tot Pilatus gespreek, en ons het gesien dat Hy slae ontvang en in die aangesig bespuug word, en dat die soldate ‘n doringkroon vir Hom opgesit het en Hy gegésel is en van Pilatus Sy vonnis ontvang het,	",
+"	7b en dat Hy gefolter is op die [plek van die] Hoofskedel, en twee rowers saam met Hom; en dat hulle Hom asyn met gal gegee het om te drink, en die soldaat Longinus Sy sy met ‘n spies deurboor het,	",
+"	7c en dat JôWsef, ons geëerde vader, Sy liggaam gevra het, en dat Hy, soos hy sê, opgestaan het, en soos die drie leraars sê:	",
+"	7d Ons het Hom sien opvaar na die Hemele; en dat rabbi Levi getuig het van die dinge wat rabbi Simeon gesê het:	",
+"	7e Kyk, hierdie Kind is bestem tot ‘n val en opstanding van baie in JisraEl, en tot ‘n Teken wat weerspreek sal word.	",
+"	7f En al die leraars het aan die hele volk van Elohim gesê: As dit van Elohim geskied het, en dit wonderlik in ons oë is, dan sal julle sekerlik weet, o huis van Jakob, dat dit geskrywe staan:	",
+"	7g Vervloek is elkeen wat hang aan ‘n hout; [Deuteronómium 21:23] en ‘n ander Skrif leer: Die gode wat die Hemele en die Aarde nie gemaak het nie, sal vergaan.	",
+"	7h En die priesters en die Leviete sê vir mekaar: As Sy gedagtenis voortduur tot [die jaar] wat Jobel genoem word [die jubeljaar], weet dan dat Hy sal voortduur tot in ewigheid en vir Hom ‘n nuwe volk verwek het.	",
+"	7i Toe het die owerstes van die sinagoge en die priesters en die Leviete die hele JisraEl vermaan en gesê: Vervloek is die adamiet wat die maaksel van ‘n mensehand sal vereer; en vervloek is die adamiet wat skepsels naas die Skepper sal vereer!	",
+"	7j En die hele volk het gesê Amein! Amein! [Deuteronómium 27:15]	",
+"	7k En die hele volk het ‘n loflied aan JaHWeH gesing en gesê: Geseënd is JaHWeH wat aan die volk van JisraEl rus gegee het volgens alles wat Hy gespreek het.	",
+"	7l Daar het nie een Woord op die Aarde geval van al die goeie Woorde wat Hy tot Sy kneg Moshè gespreek het nie. Mag JaHWeH onse Elohey met ons wees soos Hy met ons vaders was; mag Hy ons nie verlaat nie!	",
+"	7m Mag Hy ons nie verderf nie sodat ons ons hart tot Hom mag neig en in al Sy Weë mag wandel, en sodat ons Sy Gebooie en Sy Verordeninge mag onderhou wat Hy ons vaders beveel het.	",
+"	7n En in dié dag sal JaHWeH Koning wees oor die hele Aarde; in dié dag sal JaHWeH één wees, en Sy Naam één [ZekarJaH 14:9],	",
+"	7o JaHWeH onse Koning! Hy sal ons verlos!	",
+"	7p Daar is niemand soos U nie, o JaHWeH! Groot is U, o JaHWeH, en groot is U Naam! Genees ons deur U Krag, en ons sal genees wees; verlos ons, JaHWeH, en ons sal verlos wees; want ons is U deel en U erfenis.	",
+"	7q En JaHWeH sal Sy volk nie verlaat nie om Sy grote Naam ontwil, want JaHWeH het begin om ons Sy volk te maak.	",
+"	7r En toe hulle almal die lofsang gesing het, het elkeen na sy huis vertrek en Elohim geprys. Want aan Hom kom toe die Glansrykheid tot in alle ewigheid.	",
+
+]
+}
+
+];
