@@ -1,0 +1,151 @@
+const die_brief_van_jakobus_aan_jisraelieteChapters = [
+
+{
+book: 'Die_Brief_Van_Jakobus_Aan_Jisraeliete',
+chapter: '1',
+content: [
+
+"	1 JAKOBUS, ’n dienskneg van Elohim en ons Meester, JaHWèshua die Gesalfde, aan die twaalf stamme wat in die verstrooiing is: Groete!	",
+"	2 AG dit louter Vreugde, my broers, wanneer julle in allerhande versoekinge val,	",
+"	3 omdat julle weet dat die beproewing van julle Geloof lydsaamheid bewerk.	",
+"	4 Maar die volharding moet tot suiwere werke lei, sodat julle suiwer en sonder gebrek kan wees en in niks kortkom nie.	",
+"	5 En as iemand van julle Wysheid kortkom, laat hom Haar van JaHWeH bid, wat aan almal eenvoudig gee sonder om te verwyt, en Sy sal aan hom gegee word.	",
+"	6 Maar hy moet in die Geloof bid, sonder om te twyfel; want hy wat twyfel, is soos ’n golf van die see wat deur die wind gedrywe en voortgesweep word.	",
+"	7 Want dié adamiet moenie dink dat hy iets van die Meester sal ontvang nie – [Sirah 15:1-8]	",
+"	8 so ’n dubbelhartige man, onbestendig in al sy weë.	",
+"	9 Maar laat die broeder wat gering is, roem in sy hoogheid,	",
+"	10 en die ryke in sy geringheid, want soos ’n blom van die gras sal hy verbygaan.	",
+"	11 Want die son gaan op met sy hitte en laat die gras verdor, en sy blom val af, en die sierlikheid van sy gedaante vergaan; so sal die ryke ook in sy weë verwelk.	",
+"	12 Geseënd is die man wat versoeking verdra, want as hy die toets deurstaan het, sal hy die Kroon van die lewe ontvang wat die Meester beloof het aan die wat Hom liefhet.	",
+"	13 Laat niemand, as hy in versoeking kom, sê: Ek word deur die Elohim versoek nie. Want die Elohim kan deur die besoedeling nie versoek word nie, en self versoek HY niemand nie.	",
+"	14 Maar elkeen word versoek as hy deur sy eie begeerlikheid weggesleep en verlok word.	",
+"	15 Daarna, as die begeerlikheid ontvang het, baar sy oortredinge; en as die oortredinge tot volle ontwikkeling gekom het, bring sy die Dood voort.	",
+"	16 Moenie dwaal nie, my geliefde broers.	",
+"	17 Elke suiwer Gif en elke rasegte Gawe daal van Bo af neer, van die VADER van die Ligte, by wie daar geen verandering of skaduwee van omkering is nie.	",
+"	18 Volgens Sy wil het Hy ons voortgebring deur die Woord van die Waarheid, sodat ons as eerstelinge van Sy skepsele kan wees.	",
+"	19 So dan, my geliefde broers, elke adamiet moet gou wees om te hoor, stadig om te praat, stadig om toornig te word.	",
+"	20 Want die toorn van ’n man bewerk nie die Geregtigheid voor Elohim nie.	",
+"	21 Daarom, doen afstand van alle vuiligheid en oorvloed van besoedeling, en ontvang met sagmoedigheid die ingeplante Woord, wat in staat is om julle siele te red.	",
+"	22 En word daders van die Woord en nie net hoorders wat julleself bedrieg nie.	",
+"	23 Want as iemand ’n hoorder van die Woord is en nie ’n dader nie, dié is soos ’n man wat sy ras se voorkoms in ’n spieël sien;	",
+"	24 want hy sien homself en gaan weg en vergeet dadelik hoe hy gelyk het.	",
+"	25 Maar hy wat diep insien in die vryheid van die Wet van rasegtheid en in haar bly, hy sal, omdat hy nie ’n vergeetagtige hoorder is nie, maar ’n dader van die werk, geseënd wees in wat hy doen.	",
+"	26 As iemand onder julle meen dat hy gelowig is en sy tong nie in toom hou nie, maar sy hart mislei, die aanbidding van hierdie man is tevergeefs. [Spreuke 18:21]	",
+"	27 Suiwer aanbidding en rasegte wandel voor JaHWèshua en die VADER is dit: om wese en weduwees in hulle verdrukking te besoek en om jou onbevlek te bewaar teen die wêreld.	",
+
+]
+},
+{
+book: 'Die_Brief_Van_Jakobus_Aan_Jisraeliete',
+chapter: '2',
+content: [
+		
+"	1 MY broers, laat julle Geloof in onse JaHWèshua die Gesalfde, onse Meester van die Glansrykheid, nie wees met aanneming van die persoon nie.	",
+"	2 Want as daar in julle vergadering ’n man inkom met goue ringe aan die vingers, met ’n pragtige kleed aan, en daar kom ook ’n arm man in met vuil klere aan;	",
+"	3 en as julle opsien na hom wat die pragtige kleed dra, en vir hom sê: Gaan u op hierdie goeie plek sit, en vir die arme sê julle: Gaan jy daar staan of hier onder my voetbank sit -	",
+"	4 het julle dan nie by julleself onderskeid gemaak en regters met besoedelde denke geword nie?	",
+"	5 Luister, my geliefde broers - het JaHWèshua nie die armes van hierdie wêreld uitverkies as rykes in die Geloof en Erfgename van die Koninkryk wat Hy beloof het aan die wat Hom liefhet nie?	",
+"	6 Maar julle het die arm man oneer aangedoen. Is dit nie juis die rykes wat julle oorweldig en julle voor die regbanke sleep nie?	",
+"	7 Is dit nie hulle wat die edele Naam belaster wat oor julle aangeroep is nie?	",
+"	8 As julle ewenwel die koninklike Wet volbring volgens die Skrif: Jy moet jou naaste liefhê soos jouself - dan doen julle goed. [Levítikus 19:18]	",
+"	9 Maar as julle partydig is, doen julle oortredinge en word deur die Wet as oortreders bestraf.	",
+"	10 Want wie die hele Wet onderhou, maar in een opsig struikel, het aan almal skuldig geword.	",
+"	11 Want Hy wat gesê het: Jy mag nie vermeng nie, het ook gesê: Jy mag nie moor nie. As jy nou nie vermeng nie, maar moor, het jy ’n oortreder van die Wet geword. [Exodus 20:13, 14, Deuteronómium 5:18]	",
+"	12 Julle moet so spreek en so doen soos diegene wat deur die Wet van Vryheid geoordeel sal word.	",
+"	13 Want die oordeel sal onbarmhartig wees oor die wat geen Barmhartigheid bewys het nie; en die Barmhartigheid roem teen die oordeel.	",
+"	14 WAT baat dit, my broers, as iemand sê dat hy die Geloof het, maar hy het nie die werke nie? Dié geloof kan hom tog nie red nie?	",
+"	15 As daar nou ’n broeder of suster naak is en aan die daaglikse voedsel gebrek het,	",
+"	16 en een uit julle sou vir hulle sê: Gaan heen in Vrede, word warm, word versadig, maar julle gee hulle nie wat vir die liggaam nodig is nie - wat baat dit?	",
+"	17 Net so is ook die Geloof, as sy geen werke het nie, in sigself dood.	",
+"	18 Maar iemand sal sê: Jy het die geloof en ek die werke. Toon my jou geloof uit jou werke, en ek sal jou uit my werke my geloof toon.	",
+"	19 Jy glo dat Elohim EEN is. Jy doen goed; die demone glo dit ook, en hulle sidder.	",
+"	20 Maar wil jy weet, o nietige adamiet, dat die geloof sonder die werke dood is?	",
+"	21 Is Abraham, ons vader, nie uit die werke geregverdig toe hy Isak, sy seun, op die altaar opgetel het nie?	",
+"	22 Sien jy dat die Geloof saamgewerk het met sy werke en deur sy werke wat volmaak was, is die Geloof vervolmaak?	",
+"	23 En die Skrif is vervul wat sê: En Abraham het Elohim geglo, en Sy is hom tot Geregtigheid gereken, en hy is ’n geliefde van Elohim genoem.	",
+"	24 Sien julle dan nou dat die adamiet geregverdig word uit die werke en nie alleen uit die Geloof nie?	",
+"	25 En is Ragab, die herbergier, nie ook net so geregverdig uit die werke toe sy die boodskappers ontvang en met ’n ander pad weggestuur het nie?	",
+"	26 Want soos die liggaam sonder gees dood is, so is ook die Geloof sonder die werke dood.	",
+
+]
+},
+{
+book: 'Die_Brief_Van_Jakobus_Aan_Jisraeliete',
+chapter: '3',
+content: [
+		
+"	1 MOENIE baie leermeesters wees nie, my broers, omdat julle weet dat ons ’n groter oordeel sal ondergaan.	",
+"	2 Want ons almal struikel dikwels. As iemand in woorde nie struikel nie, is hy ’n volmaakte man, in staat om ook die hele liggaam in toom te hou.	",
+"	3 Kyk, ons sit stange in die perde se bekke, sodat hulle ons gehoorsaam kan wees, en ons stuur hulle hele liggaam daarmee.	",
+"	4 Kyk, ook die skepe, alhoewel hulle so groot is en deur hewige winde voortgedryf word, word gestuur deur ’n baie klein roer net waarheen die stuurman wil.	",
+"	5 Net so is die tong ook ’n klein lid en beroem hom op groot dinge - kyk hoe ’n groot hoop hout steek ’n klein vuurtjie aan die brand.	",
+"	6 Die tong is ook ’n vuur, die wêreld van Ongeregtigheid. Net so ’n plek neem die tong onder ons lede in; sy besmet die hele liggaam en steek die hele oorsprong van lewe aan die brand en word uit die hel aangesteek.	",
+"	7 Want elke soort natuur van wilde diere en voëls en kruipende sowel as seediere word getem en is getem deur die menslike natuur.	",
+"	8 Maar die tong kan geen mens tem nie; sy is ’n onbedwingbare besoedeling, vol dodelike gif.	",
+"	9 Met haar loof ons JaHWèshua en die VADER, en met haar vervloek ons die adamiete wat na die gelykenis van Elohim gemaak is.	",
+"	10 Uit dieselfde mond kom seën en vervloeking. Dit, my broers, behoort nie so te wees nie.	",
+"	11 ’n Fontein laat tog nie uit dieselfde oog vars en bitter water opborrel nie?	",
+"	12 ’n Vyeboom, my broers, kan tog nie olywe voortbring, of ’n Wingerdstok vye nie? So kan geen Fontein brak en vars water voortbring nie.	",
+"	13 WIE is wys en verstandig onder julle? Laat hom uit sy suiwere lewenswandel sy werke in sagmoedige wysheid toon.	",
+"	14 Maar as julle bittere afguns en selfsug in julle hart het, moenie roem en lieg teen die Waarheid nie.	",
+"	15 Sy is nie die wysheid wat van bo kom nie, maar sy is aards, natuurlik, satanies;	",
+"	16 want waar afguns en selfsug is, daar is wanorde en allerhande gemene dade.	",
+"	17 Maar die Wysheid van Bo is ten eerste onbesoedeld, dan vredeliewend, vriendelik, geseglik, vol Barmhartigheid en suiwer vrugte, onpartydig en opreg. [Wysheid van Salomo 7:22-23]	",
+"	18 En die vrug van die Geregtigheid word gesaai in Vrede vir die wat vrede maak.	",
+
+]
+},
+{
+book: 'Die_Brief_Van_Jakobus_Aan_Jisraeliete',
+chapter: '4',
+content: [
+		
+"	1 WAARVANDAAN kom oorloë en vegterye onder julle? Kom hulle nie hiervandaan, van julle welluste wat in julle lede stryd voer nie?	",
+"	2 Julle begeer en julle het nie, julle pleeg moord en is naywerig en julle kan niks verkry nie. Julle veg en maak oorlog, en julle het nie, omdat julle nie bid nie.	",
+"	3 Julle bid en julle ontvang nie, omdat julle verkeerd bid, om dit in julle welluste deur te bring.	",
+"	4 Julle mans wat vermeng en julle  vrouens wat vermeng, weet julle nie dat die vriendskap van die wêreld vyandskap teen Elohim is nie? Wie dan ’n vriend van die wêreld wil wees, word ’n vyand van Elohim. [Levítikus 20:10]	",
+"	5 Of meen julle dat die Skrif tevergeefs sê: Met jaloersheid begeer die Gees wat in ons woon?	",
+"	6 Maar Hy gee groter Barmhartigheid; daarom sê Hy: Elohim weerstaan die hoogmoediges, maar aan die nederiges gee Hy Barmhartigheid. [Spreuke van Salomo 3:34]	",
+"	7 Onderwerp julle dan aan Elohim; weerstaan die Satan, en hy sal van julle wegvlug.	",
+"	8 Nader tot Elohim, en Hy sal tot julle nader. Was die hande, julle oortreders, en suiwer die harte, julle dubbelhartiges!	",
+"	9 Weeklaag, treur en ween. Laat julle gelag in treurigheid verander word en julle blydskap in bedruktheid.	",
+"	10 Verneder julle voor die Meester, en Hy sal julle verhoog.	",
+"	11 Broers, moenie van mekaar kwaadspreek spreek nie. Die wat kwaad spreek van sy broeder en sy broeder oordeel, spreek kwaad van die Wet en oordeel die Wet; en as jy die Wet oordeel, is jy nie ’n dader van die Wet nie, maar ’n regter.	",
+"	12 Een is die Wetgewer, Hy wat mag het om te red en te verderf.	",
+"	13 KOM nou, julle wat sê: Vandag of môre sal ons na dié en dié stad gaan en daar een jaar deurbring en handel drywe en wins maak -	",
+"	14 julle wat nie eens weet wat môre sal gebeur nie. Want hoedanig is julle lewe? Dit is tog maar ’n damp wat vir ’n kort tydjie verskyn en daarna verdwyn.	",
+"	15 In plaas dat julle sê: As JaHWeH wil en ons lewe, dan sal ons dit of dat doen.	",
+"	16 Maar nou roem julle in jul grootpratery. Al sulke roem is besoedeling.	",
+"	17 Wie dan weet om suiwer te wees en dit nie doen nie, vir hom is dit ‘n oortreding.	",
+
+]
+},
+{
+book: 'Die_Brief_Van_Jakobus_Aan_Jisraeliete',
+chapter: '5',
+content: [
+		
+"	1 KOM nou, julle rykes, ween en huil oor die ellendes wat oor julle kom.	",
+"	2 Julle rykdom is bedorwe, en julle klere is deur die motte verniel.	",
+"	3 Julle goud en silwer is verroes, en hulle roes sal tot ’n getuienis teen julle wees en sal soos ’n vuur julle vlees verteer. Julle het skatte vergader in die laaste dae.	",
+"	4 Kyk, die loon van die arbeiders wat julle land afgeoes het, wat deur julle agtergehou is, roep uit; en die geroep van die maaiers het gekom tot in die Ore van JaHWeH van die leërskare.	",
+"	5 Julle het op die Aarde ’n weelderige en losbandige lewe gelei; julle het jul harte vet gevoer soos op ’n slagdag.	",
+"	6 Veroordeel, vermoor het julle die regverdige; hy versit hom nie teen julle nie.	",
+"	7 WEES dan geduldig, broers, tot op die wederkoms van die Meester. Kyk, die landbouer wag op die kostelike vrug van die Aarde en het geduld daarmee totdat sy die vroeë en die laat reën ontvang het. [JôWEL 2:23]	",
+"	8 Julle moet ook geduldig wees; versterk julle harte, want die wederkoms van die Meester is naby.	",
+"	9 Moenie teen mekaar sug nie, broers, sodat julle nie veroordeel word nie. Kyk, die Regter staan voor die deur. [Ode van Salomo 33:11]	",
+"	10 Neem as voorbeeld van lyding, my broers, en van geduld die Profete wat in die Naam van JaHWeH gespreek het.	",
+"	11 Kyk, ons reken hulle geseënd wat verdra. Julle het gehoor van die lydsaamheid van Job, en julle het die einddoel van JaHWeH met hom gesien, dat JaHWeH vol Medelye en Ontferming is.	",
+"	12 Maar bo alles, my broers, moenie sweer nie: nie by die Hemele nie, ook nie by die Aarde nie en ook geen ander eed nie; maar laat julle ja, ja wees en julle nee nee, sodat julle nie onder ’n oordeel val nie.	",
+"	13 Is daar iemand onder julle wat ly? Laat hom bid. Is iemand opgeruimd? Laat hom psalmsing.	",
+"	14 Is daar iemand siek onder julle? Laat hom die oudstes van die gemeente inroep, en laat hulle oor hom bid nadat hulle hom in die Naam van JaHWeH met olie gesalf het.	",
+"	15 En die gebed van die Geloof sal die kranke red, en JaHWeH sal hom oprig. Selfs as hy oortredinge gedoen het, sal dit hom vergewe word.	",
+"	16 Bely mekaar julle misdade en bid vir mekaar, sodat julle gesond kan word. Die vurige gebed van ’n regverdige het groot krag.	",
+"	17 EliJaHûW was ’n adamiet net soos ons, en hy het ernstig gebid dat dit nie moes reën nie, en dit het op die Aarde drie jaar en ses maande lank nie gereën nie;	",
+"	18 en hy het weer gebid, en die Hemele het reën gegee en die Aarde het haar vrug laat uitspruit.	",
+"	19 Broers, as een onder julle van die Waarheid afgedwaal het en iemand hom bekeer,	",
+"	20 laat hy weet dat die een wat ’n oortreder van sy foutiewe weg bekeer, ’n siel uit die Dood sal red en ’n menigte oortredinge sal bedek.	",
+
+]
+}
+];
