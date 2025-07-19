@@ -116,6 +116,12 @@
     <button onclick="resetVerseCard()">♻️ Reset All</button>
   </div>
 
+  <div class="controls">
+  <label>📤 Upload Custom Image:
+      <input type="file" accept="image/*" onchange="uploadImage(this)">
+    </label>
+</div>
+
   <!-- Background & Font Controls -->
   <div class="controls">
     <label>🎨 Background Image:
@@ -147,10 +153,7 @@
 
       </select>
     </label>
-    <label>📤 Upload Custom Image:
-      <input type="file" accept="image/*" onchange="uploadImage(this)">
-    </label>
-    <label>🖍️ Overlay Color:
+     <label>🖍️ Overlay Color:
       <input type="color" value="#000000" onchange="setOverlayColor(this.value)">
     </label>
     <label>🔍 Zoom Background:
