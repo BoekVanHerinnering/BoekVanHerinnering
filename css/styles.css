@@ -806,6 +806,8 @@ font-size: 14px; /* Adjust the size as needed */
 
 
 .popup-buttons {
+  position: sticky;
+  bottom: 0;
   border-top: 1px solid #ccc;
   background: #f9f9f9;
   padding: 10px;
