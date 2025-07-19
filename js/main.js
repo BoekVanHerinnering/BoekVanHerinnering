@@ -155,6 +155,12 @@ function addToFavorites() {
 }
 
 function previewVerse() {
+  const text = selectedVerses.map(v =>
+    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
+  ).join('\n\n');
+
+  // Get grouped HTML format (same as in updatePopupContent)
+  const container = document.createElement("div");
   const grouped = {};
 
   selectedVerses.forEach(v => {
@@ -164,34 +170,33 @@ function previewVerse() {
     const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
 
     if (!grouped[title]) grouped[title] = [];
-    grouped[title].push(v.text);
+    grouped[title].push(v);
   });
 
-  let referenceHTML = "";
-  let versesHTML = "";
-
-  Object.entries(grouped).forEach(([title, texts], index, arr) => {
-    referenceHTML += `${title}${index < arr.length - 1 ? " · " : ""}`;
-    versesHTML += `<h3 style="margin-bottom: 6px; font-weight: bold;">📖 ${title}</h3>`;
-    texts.forEach(text => {
-      versesHTML += `<div style="margin-bottom: 6px;">${text}</div>`;
+  Object.keys(grouped).forEach(title => {
+    const section = document.createElement("div");
+    section.innerHTML = `<h3>📖 ${title}</h3>`;
+    grouped[title].forEach(v => {
+      const line = document.createElement("div");
+      line.textContent = v.text;
+      section.appendChild(line);
     });
-    if (index < arr.length - 1) {
-      versesHTML += `<hr>`;
-    }
+    container.appendChild(section);
+    container.appendChild(document.createElement("hr"));
   });
 
-  const previewData = {
-    reference: referenceHTML,
-    html: versesHTML
+  const data = {
+    reference: "Die Boek Van Herinnering",
+    html: container.innerHTML
   };
 
-  const encodedData = encodeURIComponent(JSON.stringify(previewData));
-  const previewUrl = `preview.html?data=${encodedData}`;
-  window.open(previewUrl, '_blank');
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  window.open(`preview.html?data=${encoded}`, "_blank");
 
-  document.getElementById("versePopup").classList.add("hidden");
+  // ✅ Clear highlights and verses after preview
+  clearSelectedVerses();
 }
+
 
 
 
@@ -373,6 +378,163 @@ function goToVerse(targetPage, verseNumbers) {
 
     }, 100);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function scrollToVerseAndHighlight(verseId) {
+  const target = document.getElementById(verseId);
+  if (target) {
+    target.classList.add("highlight-verse");
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => target.classList.remove("highlight-verse"), 5000);
+  }
+}
+
+function addToFavorites() {
+  const grouped = JSON.parse(localStorage.getItem("favorites") || "{}");
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    const pageDiv = el.closest(".page");
+    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+
+    if (!grouped[title]) grouped[title] = [];
+    // prevent duplicates
+    if (!grouped[title].some(item => item.id === v.id)) {
+      grouped[title].push(v);
+    }
+  });
+
+  localStorage.setItem("favorites", JSON.stringify(grouped));
+
+  // At the end of addToFavorites()
+closePopup();
+
+// ✅ Make sure the menu is visible
+if (!menu.classList.contains('show')) {
+  menu.classList.add('show');
+  menuBtn.textContent = '❌ Menu';
+}
+
+// ✅ Then show favorites
+showFavorites();
+
+
+  // Auto-expand the section and highlight last added
+  const last = selectedVerses[selectedVerses.length - 1];
+  setTimeout(() => {
+  const section = document.querySelector(`[data-group="${last.book}_${last.chapter}"]`);
+  if (section) section.open = true;
+  scrollToVerseAndHighlight(last.id);
+}, 500);
+
+}
+
+function showFavorites() {
+  const container = document.getElementById("favoritesList");
+  container.innerHTML = "<h3>⭐ Your Favorite Verses</h3>";
+
+  const stored = JSON.parse(localStorage.getItem("favorites") || "{}");
+  const titles = Object.keys(stored);
+
+  if (titles.length === 0) {
+    container.innerHTML += "<p>No favorites yet.</p>";
+  } else {
+    titles.forEach(title => {
+      const group = stored[title];
+      const groupId = (group[0]?.book || "") + "_" + (group[0]?.chapter || "");
+
+      const details = document.createElement("details");
+      details.setAttribute("data-group", groupId);
+
+      const summary = document.createElement("summary");
+      summary.textContent = `📖 ${title}`;
+      details.appendChild(summary);
+
+      group.forEach(v => {
+        const para = document.createElement("p");
+        para.id = v.id;
+        para.textContent = `${capitalize(v.book)} ${v.chapter}:${v.verse} – ${v.text}`;
+        para.style.padding = "5px 10px";
+        para.style.margin = "3px 0";
+        details.appendChild(para);
+      });
+
+      container.appendChild(details);
+    });
+  }
+
+  document.getElementById("favoritesPopup").classList.remove("hidden");
+}
+
+function toggleFavoritesDropdown() {
+  const popup = document.getElementById("favoritesPopup");
+  popup.classList.toggle("hidden");
+}
+
+function closeFavorites() {
+  document.getElementById("favoritesPopup").classList.add("hidden");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
