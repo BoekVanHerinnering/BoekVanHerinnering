@@ -125,7 +125,17 @@ function updatePopupContent() {
       container.appendChild(document.createElement("hr"));
     }
   });
+
+  // ✅ Wait for content to render, then scroll
+  setTimeout(() => {
+    const scrollable = document.querySelector(".popup-scrollable");
+    if (scrollable) {
+      scrollable.scrollTop = scrollable.scrollHeight;
+    }
+  }, 0);
 }
+
+
 
 
 
@@ -145,12 +155,45 @@ function addToFavorites() {
 }
 
 function previewVerse() {
-  const text = selectedVerses.map(v =>
-    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
-  ).join('\n\n');
-  alert("🔍 Preview:\n\n" + text);
-  closePopup();
+  const grouped = {};
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    const pageDiv = el.closest(".page");
+    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+
+    if (!grouped[title]) grouped[title] = [];
+    grouped[title].push(v.text);
+  });
+
+  let referenceHTML = "";
+  let versesHTML = "";
+
+  Object.entries(grouped).forEach(([title, texts], index, arr) => {
+    referenceHTML += `${title}${index < arr.length - 1 ? " · " : ""}`;
+    versesHTML += `<h3 style="margin-bottom: 6px; font-weight: bold;">📖 ${title}</h3>`;
+    texts.forEach(text => {
+      versesHTML += `<div style="margin-bottom: 6px;">${text}</div>`;
+    });
+    if (index < arr.length - 1) {
+      versesHTML += `<hr>`;
+    }
+  });
+
+  const previewData = {
+    reference: referenceHTML,
+    html: versesHTML
+  };
+
+  const encodedData = encodeURIComponent(JSON.stringify(previewData));
+  const previewUrl = `preview.html?data=${encodedData}`;
+  window.open(previewUrl, '_blank');
+
+  document.getElementById("versePopup").classList.add("hidden");
 }
+
+
 
 function clearSelectedVerses() {
   selectedVerses.forEach(v => {
