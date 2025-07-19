@@ -63,7 +63,111 @@ menuBtn.addEventListener('click', () => {
 
 
 
+let lastTapTime = 0;
+let selectedVerses = [];
 
+document.querySelectorAll("p[data-verse]").forEach(verse => {
+  verse.addEventListener("click", function () {
+    const now = Date.now();
+    if (now - lastTapTime < 400) {
+      const id = this.id; // e.g., "genésis_1_1"
+      const [book, chapter, verseNum] = id.split("_");
+      const verseText = this.textContent.trim();
+
+      if (!selectedVerses.find(v => v.id === id)) {
+        selectedVerses.push({
+          id,
+          book,
+          chapter,
+          verse: verseNum,
+          text: verseText
+        });
+        this.classList.add("verse-selected");
+      }
+
+      updatePopupContent();
+      document.getElementById("versePopup").classList.remove("hidden");
+    }
+    lastTapTime = now;
+  });
+});
+
+function updatePopupContent() {
+  const container = document.getElementById("popupVerseText");
+  container.innerHTML = "";
+
+  const grouped = {};
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    const pageDiv = el.closest(".page");
+    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+
+    if (!grouped[title]) grouped[title] = [];
+    grouped[title].push(v);
+  });
+
+  const titles = Object.keys(grouped);
+  titles.forEach((title, index) => {
+    const titleDiv = document.createElement("div");
+    titleDiv.innerHTML = `<h3 style="margin-bottom: 6px; font-weight: bold;">📖 ${title}</h3>`;
+    container.appendChild(titleDiv);
+
+    grouped[title].forEach(v => {
+      const div = document.createElement("div");
+      div.style.marginBottom = "6px";
+      div.textContent = v.text;
+      container.appendChild(div);
+    });
+
+    if (index !== titles.length - 1) {
+      container.appendChild(document.createElement("hr"));
+    }
+  });
+}
+
+
+
+
+
+function closePopup() {
+  document.getElementById("versePopup").classList.add("hidden");
+  clearSelectedVerses();
+}
+
+function addToFavorites() {
+  const text = selectedVerses.map(v =>
+    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
+  ).join('\n\n');
+  alert("✅ Added to Favorites:\n\n" + text);
+  closePopup();
+}
+
+function previewVerse() {
+  const text = selectedVerses.map(v =>
+    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
+  ).join('\n\n');
+  alert("🔍 Preview:\n\n" + text);
+  closePopup();
+}
+
+function clearSelectedVerses() {
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    if (el) el.classList.remove("verse-selected");
+  });
+  selectedVerses = [];
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function addMoreVerses() {
+  // Just hide popup but keep selected verses
+  document.getElementById("versePopup").classList.add("hidden");
+}
 
 
 
