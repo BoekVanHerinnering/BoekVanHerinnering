@@ -397,63 +397,6 @@ function goToVerse(targetPage, verseNumbers) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Toggle dark mode
 function toggleDarkMode() {
     const body = document.body;
