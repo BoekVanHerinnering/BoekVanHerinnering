@@ -164,9 +164,56 @@ function addToFavorites() {
   });
 
   localStorage.setItem("favorites", JSON.stringify(existing));
-  alert("✅ Verse(s) added to Favorites!");
   closePopup();
+
+  // ✅ Show a friendly message instead of alert
+  showMessage("✅ Verse(s) added to Favorites!");
+
+  // ✅ Open the menu if it's closed
+  const menu = document.getElementById("menu");
+  const menuBtn = document.getElementById("menuToggleBtn");
+  if (!menu.classList.contains("show")) {
+    menu.classList.add("show");
+    menuBtn.textContent = "❌ Menu";
+    menuBtn.classList.add("open");
+  }
+
+  // ✅ Trigger click on viewFavoritesBtn to load favorites
+  const favBtn = document.getElementById("viewFavoritesBtn");
+  if (favBtn) favBtn.click();
+
+  // ✅ Scroll to favorites list after it's loaded
+  setTimeout(() => {
+    const favList = document.getElementById("favoritesList");
+    if (favList) {
+      favList.scrollIntoView({ behavior: "smooth" });
+    }
+  }, 300);
 }
+
+
+function showMessage(text) {
+  const msg = document.createElement("div");
+  msg.textContent = text;
+  msg.style.position = "fixed";
+  msg.style.bottom = "20px";
+  msg.style.left = "50%";
+  msg.style.transform = "translateX(-50%)";
+  msg.style.background = "#007bff";
+  msg.style.color = "white";
+  msg.style.padding = "10px 20px";
+  msg.style.borderRadius = "10px";
+  msg.style.boxShadow = "0 0 10px rgba(0,0,0,0.2)";
+  msg.style.zIndex = "9999";
+  document.body.appendChild(msg);
+
+  setTimeout(() => {
+    msg.remove();
+  }, 2000);
+}
+
+
+
 
 document.getElementById("viewFavoritesBtn").addEventListener("click", () => {
   const list = document.getElementById("favoritesList");
