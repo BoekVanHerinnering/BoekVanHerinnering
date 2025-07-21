@@ -844,11 +844,15 @@ font-size: 14px; /* Adjust the size as needed */
   padding: 10px;
   background: #f9f9f9;
   border: 1px solid #ccc;
-  border-radius: px;
+  border-radius: 8px;
   margin-top: 10px;
 }
+
 .highlight-favorite {
   background-color: #ffe8a1; /* light yellow */
   border-left: 4px solid gold;
 }
-
+button.remove-btn {
+  float: right;
+  margin-left: 10px;
+}
