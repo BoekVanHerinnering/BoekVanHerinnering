@@ -141,19 +141,6 @@ function updatePopupContent() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function closePopup() {
   document.getElementById("versePopup").classList.add("hidden");
   clearSelectedVerses();
@@ -231,6 +218,7 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+
 function highlightFavorites() {
   const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
   favorites.forEach(fav => {
@@ -241,7 +229,6 @@ function highlightFavorites() {
   });
 }
 window.addEventListener("DOMContentLoaded", highlightFavorites);
-
 
 
 
