@@ -141,18 +141,130 @@ function updatePopupContent() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 function closePopup() {
   document.getElementById("versePopup").classList.add("hidden");
   clearSelectedVerses();
 }
 
 function addToFavorites() {
-  const text = selectedVerses.map(v =>
-    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
-  ).join('\n\n');
-  alert("✅ Added to Favorites:\n\n" + text);
+  const existing = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    const pageDiv = el.closest(".page");
+    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+
+    if (!existing.find(f => f.id === v.id)) {
+      existing.push({
+        ...v,
+        title
+      });
+    }
+  });
+
+  localStorage.setItem("favorites", JSON.stringify(existing));
+  alert("✅ Verse(s) added to Favorites!");
   closePopup();
 }
+
+document.getElementById("viewFavoritesBtn").addEventListener("click", () => {
+  const list = document.getElementById("favoritesList");
+  list.innerHTML = ""; // Clear previous
+
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  if (favorites.length === 0) {
+    list.innerHTML = "<p>Geen gunsteling verse gestoor nie.</p>";
+  } else {
+    favorites.forEach((v) => {
+      const div = document.createElement("div");
+      div.style.marginBottom = "10px";
+      div.style.position = "relative";
+
+      const cleanedText = v.text.replace(/\(\(.*?\)\)/g, "").trim();
+      div.innerHTML = `
+  <strong>📖 ${v.title}</strong><br>
+  <span>${capitalize(v.book)} ${v.chapter}:${v.verse} - ${cleanedText}</span>
+  <br>
+  <button style="margin-top: 5px;" onclick="removeFavorite('${v.id}')">🗑️ Verwyder</button>
+`;
+
+
+      list.appendChild(div);
+    });
+  }
+
+  list.classList.remove("hidden"); // Always show list
+});
+
+function removeFavorite(id) {
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const updated = favorites.filter(v => v.id !== id);
+  localStorage.setItem("favorites", JSON.stringify(updated));
+
+  // Refresh the list instantly
+  document.getElementById("viewFavoritesBtn").click();
+}
+
+function clearFavorites() {
+  if (confirm("Is jy seker jy wil al jou gunsteling verse verwyder?")) {
+    localStorage.removeItem("favorites");
+    document.getElementById("favoritesList").innerHTML = "<p>Gunstelinge verwyder.</p>";
+  }
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function highlightFavorites() {
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  favorites.forEach(fav => {
+    const el = document.getElementById(fav.id);
+    if (el) {
+      el.classList.add("highlight-favorite");
+    }
+  });
+}
+window.addEventListener("DOMContentLoaded", highlightFavorites);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function previewVerse() {
   const text = selectedVerses.map(v =>
