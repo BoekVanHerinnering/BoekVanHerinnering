@@ -163,6 +163,18 @@ function addToFavorites() {
     }
   });
 
+function goToFavoritesPage() {
+  // Hide other pages
+  document.getElementById('mainPage').classList.add('hidden');
+  document.getElementById('booksPage').classList.add('hidden');
+  document.getElementById('chaptersPage').classList.add('hidden');
+  document.getElementById('versesPage').classList.add('hidden');
+
+  // Show favorites page (replace 'favoritesPage' with your actual favorites section ID)
+  document.getElementById('favoritesPage').classList.remove('hidden');
+}
+
+  
   localStorage.setItem("favorites", JSON.stringify(existing));
   closePopup();
 
