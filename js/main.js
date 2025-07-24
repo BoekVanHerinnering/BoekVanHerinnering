@@ -143,6 +143,8 @@ function updatePopupContent() {
 
 function closePopup() {
   document.getElementById("versePopup").classList.add("hidden");
+function closePopup() {
+  document.getElementById("versePopup").classList.add("hidden");
   clearSelectedVerses();
 }
 
@@ -163,25 +165,23 @@ function addToFavorites() {
     }
   });
 
-function goToFavoritesPage() {
-  // Hide other pages
-  document.getElementById('mainPage').classList.add('hidden');
-  document.getElementById('booksPage').classList.add('hidden');
-  document.getElementById('chaptersPage').classList.add('hidden');
-  document.getElementById('versesPage').classList.add('hidden');
+  function goToFavoritesPage() {
+    // Hide other sections
+    document.getElementById('mainPage').classList.add('hidden');
+    document.getElementById('booksPage').classList.add('hidden');
+    document.getElementById('chaptersPage').classList.add('hidden');
+    document.getElementById('versesPage').classList.add('hidden');
 
-  // Show favorites page (replace 'favoritesPage' with your actual favorites section ID)
-  document.getElementById('favoritesPage').classList.remove('hidden');
-}
+    // Show the favorites section
+    document.getElementById('favoritesPage').classList.remove('hidden');
+  }
 
-  
   localStorage.setItem("favorites", JSON.stringify(existing));
   closePopup();
 
-  // ✅ Show a friendly message instead of alert
   showMessage("✅ Verse(s) added to Favorites!");
 
-  // ✅ Open the menu if it's closed
+  // Open the menu if it's closed
   const menu = document.getElementById("menu");
   const menuBtn = document.getElementById("menuToggleBtn");
   if (!menu.classList.contains("show")) {
@@ -190,11 +190,14 @@ function goToFavoritesPage() {
     menuBtn.classList.add("open");
   }
 
-  // ✅ Trigger click on viewFavoritesBtn to load favorites
+  // Load and scroll to favorites
   const favBtn = document.getElementById("viewFavoritesBtn");
   if (favBtn) favBtn.click();
 
-  // ✅ Scroll to favorites list after it's loaded
+  // Jump to favorites page
+  goToFavoritesPage();
+
+  // Scroll to list after short delay
   setTimeout(() => {
     const favList = document.getElementById("favoritesList");
     if (favList) {
@@ -202,6 +205,7 @@ function goToFavoritesPage() {
     }
   }, 300);
 }
+
 
 
 function showMessage(text) {
