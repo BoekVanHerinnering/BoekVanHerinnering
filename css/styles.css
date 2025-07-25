@@ -839,7 +839,7 @@ font-size: 14px; /* Adjust the size as needed */
 
 
 .favorites-container {
-  max-height: 300px;
+  max-height: 800px;
   overflow-y: auto;
   padding: 10px;
   background: #f9f9f9;
