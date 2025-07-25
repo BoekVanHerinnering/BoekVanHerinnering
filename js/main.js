@@ -32,42 +32,23 @@
 
 
 
-// Track if menu was forced open (e.g., by addToFavorites)
-let menuIsForcedOpen = false;
 
-const menuBtn = document.getElementById("menuToggleBtn");
-const menu = document.getElementById("menu");
 
-// Handle manual toggle via menu button
+const menuBtn = document.getElementById('menuToggleBtn');
+const menu = document.getElementById('menu');
+
 menuBtn.addEventListener('click', () => {
-  if (menuIsForcedOpen) {
-    toggleMenu(false); // Allow user to close it manually
+  menu.classList.toggle('show');
+
+  if (menu.classList.contains('show')) {
+    menuBtn.textContent = '❌ Menu';
+    menuBtn.classList.add('open');
   } else {
-    toggleMenu(); // Normal toggle
+    menuBtn.textContent = '🔵 Menu';
+    menuBtn.classList.remove('open');
   }
 });
 
-// Toggle function with optional force control
-function toggleMenu(forceOpen = null) {
-  const isOpen = menu.classList.contains("show");
-  const shouldOpen = forceOpen === null ? !isOpen : forceOpen;
-
-  if (shouldOpen) {
-    menu.classList.add("show");
-    menuBtn.textContent = '❌ Menu';
-    menuBtn.classList.add('open');
-    if (forceOpen === true) {
-      menuIsForcedOpen = true; // lock it open if forced
-    }
-  } else {
-    if (!menuIsForcedOpen || forceOpen === false) {
-      menu.classList.remove("show");
-      menuBtn.textContent = '☰ Menu';
-      menuBtn.classList.remove('open');
-      menuIsForcedOpen = false;
-    }
-  }
-}
 
 
 
@@ -144,17 +125,7 @@ function updatePopupContent() {
       container.appendChild(document.createElement("hr"));
     }
   });
-
-  // ✅ Wait for content to render, then scroll
-  setTimeout(() => {
-    const scrollable = document.querySelector(".popup-scrollable");
-    if (scrollable) {
-      scrollable.scrollTop = scrollable.scrollHeight;
-    }
-  }, 0);
 }
-
-
 
 
 
@@ -166,226 +137,20 @@ function closePopup() {
 }
 
 function addToFavorites() {
-  const existing = JSON.parse(localStorage.getItem("favorites") || "[]");
-
-  // For each selected verse, get its title and save
-  selectedVerses.forEach(v => {
-    const el = document.getElementById(v.id);
-    if (!el) return;
-
-    const pageDiv = el.closest(".page");
-    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
-    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
-
-    if (!existing.find(f => f.id === v.id)) {
-      existing.push({
-        ...v,
-        title
-      });
-    }
-  });
-
-  localStorage.setItem("favorites", JSON.stringify(existing));
+  const text = selectedVerses.map(v =>
+    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
+  ).join('\n\n');
+  alert("✅ Added to Favorites:\n\n" + text);
   closePopup();
-
-  // Show homepage page
-  document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
-  document.getElementById("homepage").classList.remove("hidden");
-
-  // Open menu if closed
-  const menu = document.getElementById("menu");
-  const menuBtn = document.getElementById("menuToggleBtn");
-  if (!menu.classList.contains("show")) {
-    toggleMenu(true);
-
-  }
-
-  // Open favorites list if hidden
-  const favoritesList = document.getElementById("favoritesList");
-  if (favoritesList.classList.contains("hidden")) {
-    favoritesList.classList.remove("hidden");
-  }
-
-  // Load favorites content
-  showFavorites();
 }
-
-
-
-
-
-
-
-
-function showFavorites() {
-  const list = document.getElementById("favoritesList");
-  list.innerHTML = ""; // Clear previous
-
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-
-  if (favorites.length === 0) {
-    list.innerHTML = "<p>Geen gunsteling verse gestoor nie.</p>";
-  } else {
-    favorites.forEach((v) => {
-      const div = document.createElement("div");
-      div.style.marginBottom = "10px";
-      div.style.position = "relative";
-
-      const cleanedText = v.text.replace(/\(\(.*?\)\)/g, "").trim();
-      div.innerHTML = `
-        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 10px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <strong style="display: block; margin-bottom: 8px;">📖 ${v.title}</strong>
-          <span style="display: block; margin-bottom: 12px;">${cleanedText}</span>
-          <div style="display: flex; flex-direction: column; align-items: center; width: 260px; margin-left: auto; margin-right: auto;">
-            <button style="margin-bottom: 5px; width: 100%;" onclick="editNote('${v.id}')">📝 Nota</button>
-            <div id="note-${v.id}" style="margin-top: 10px; font-style: italic; color: gray;">
-              ${v.note ? v.note : ''}
-            </div>
-            <button style="width: 100%;" onclick="removeFavorite('${v.id}')">🗑️ Verwyder</button>
-          </div>
-        </div>
-      `;
-      list.appendChild(div);
-    });
-  }
-}
-
-
-const favoritesList = document.getElementById("favoritesList");
-const viewFavoritesBtn = document.getElementById("viewFavoritesBtn");
-
-viewFavoritesBtn.addEventListener("click", () => {
-  // Toggle open/close
-  const isVisible = !favoritesList.classList.contains("hidden");
-
-  if (isVisible) {
-    // 🔽 Already open, so close it
-    favoritesList.classList.add("hidden");
-  } else {
-    // 🔼 Was closed, so open and load content
-    showFavorites(); // your existing code to load content
-    favoritesList.classList.remove("hidden");
-  }
-});
-
-
-
-function editNote(id) {
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-  const fav = favorites.find(f => f.id === id);
-  if (!fav) return;
-
-  const currentNote = fav.note || "";
-
-  const newNote = prompt("Voer jou nota in vir hierdie vers:", currentNote);
-  if (newNote !== null) { // user didn't press Cancel
-    fav.note = newNote.trim();
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    // Update the displayed note immediately
-    const noteDiv = document.getElementById(`note-${id}`);
-    if (noteDiv) noteDiv.textContent = fav.note;
-  }
-}
-
-
-function removeFavorite(id) {
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-  const updated = favorites.filter(v => v.id !== id);
-  localStorage.setItem("favorites", JSON.stringify(updated));
-
-  // Refresh the list instantly
-  document.getElementById("viewFavoritesBtn").click();
-}
-
-function clearFavorites() {
-  if (confirm("Is jy seker jy wil al jou gunsteling verse verwyder?")) {
-    localStorage.removeItem("favorites");
-    document.getElementById("favoritesList").innerHTML = "<p>Gunstelinge verwyder.</p>";
-  }
-}
-
-
-
-
-function highlightFavorites() {
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-  favorites.forEach(fav => {
-    const el = document.getElementById(fav.id);
-    if (el) {
-      el.classList.add("highlight-favorite");
-    }
-  });
-}
-window.addEventListener("DOMContentLoaded", highlightFavorites);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function previewVerse() {
   const text = selectedVerses.map(v =>
     `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
   ).join('\n\n');
-
-  // Get grouped HTML format (same as in updatePopupContent)
-  const container = document.createElement("div");
-  const grouped = {};
-
-  selectedVerses.forEach(v => {
-    const el = document.getElementById(v.id);
-    const pageDiv = el.closest(".page");
-    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
-    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
-
-    if (!grouped[title]) grouped[title] = [];
-    grouped[title].push(v);
-  });
-
-  Object.keys(grouped).forEach(title => {
-    const section = document.createElement("div");
-    section.innerHTML = `<h3>📖 ${title}</h3>`;
-    grouped[title].forEach(v => {
-      const line = document.createElement("div");
-      line.textContent = v.text;
-      section.appendChild(line);
-    });
-    container.appendChild(section);
-    container.appendChild(document.createElement("hr"));
-  });
-
-  const data = {
-    reference: "Die Boek Van Herinnering",
-    html: container.innerHTML
-  };
-
-  const encoded = encodeURIComponent(JSON.stringify(data));
-  window.open(`preview.html?data=${encoded}`, "_blank");
-
-  // ✅ Clear highlights and verses after preview
-  clearSelectedVerses();
+  alert("🔍 Preview:\n\n" + text);
+  closePopup();
 }
-
-
-
 
 function clearSelectedVerses() {
   selectedVerses.forEach(v => {
@@ -499,6 +264,73 @@ function goToVerse(targetPage, verseNumbers) {
 
     }, 100);
 }
+
+
+function goToVerse(targetPage, verseNumbers) {
+    let scrollPosition = window.scrollY;
+    localStorage.setItem('scrollPosition', scrollPosition);
+    lastVisitedVerse = document.querySelector('.page:not(.hidden)').id;
+
+    navigate(targetPage);
+
+    const verses = typeof verseNumbers === 'string'
+        ? verseNumbers.split(',').map(v => parseInt(v.trim()))
+        : Array.isArray(verseNumbers) ? verseNumbers : [verseNumbers];
+
+    document.querySelectorAll('.highlight-verse').forEach(el => {
+        el.classList.remove('highlight-verse', 'fade-out');
+    });
+
+    setTimeout(() => {
+        const firstVerseElement = document.querySelector(`#${targetPage} p[data-verse="${verses[0]}"]`);
+        if (firstVerseElement) {
+            let offset = 130;
+            let versePosition = firstVerseElement.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: versePosition - offset,
+                behavior: 'smooth'
+            });
+        }
+
+        verses.forEach(verseNumber => {
+            const verseElement = document.querySelector(`#${targetPage} p[data-verse="${verseNumber}"]`);
+            if (verseElement) {
+                verseElement.classList.add('highlight-verse');
+                setTimeout(() => verseElement.classList.add('fade-out'), 20000);
+                setTimeout(() => verseElement.classList.remove('highlight-verse', 'fade-out'), 40000);
+            }
+        });
+
+        // --- Show Return button ---
+        let returnButton = document.querySelector('.return-popup');
+        if (!returnButton) {
+            returnButton = document.createElement('button');
+            returnButton.classList.add('return-popup');
+            returnButton.innerText = '↩️ Return to Verse';
+            document.body.appendChild(returnButton);
+        }
+
+        returnButton.style.display = 'block';
+        returnButton.onclick = () => {
+            navigate(lastVisitedVerse);
+            const savedPosition = localStorage.getItem('scrollPosition');
+            if (savedPosition) {
+                window.scrollTo({ top: parseInt(savedPosition), behavior: 'smooth' });
+            }
+            returnButton.classList.remove('visible');
+            returnButton.style.display = 'none';
+        };
+
+        // Optional: hide return button when any other button is clicked
+        document.querySelectorAll('button:not(.return-popup)').forEach(button => {
+            button.addEventListener('click', () => {
+                returnButton.style.display = 'none';
+            });
+        });
+
+    }, 100);
+}
+
 
 
 
@@ -700,6 +532,9 @@ function formatBookName(internalName) {
   };
   return map[internalName] || internalName;
 }
+
+
+
 
 
 function searchBible() {

@@ -783,49 +783,31 @@ font-size: 14px; /* Adjust the size as needed */
   bottom: 0px;
   right: center;
   background: white;
-  border: 5px solid #000000;
+  border: 5px solid #007BFF;
   border-radius: 10px;
+  padding: 15px;
   box-shadow: 0 0 10px #0003;
   z-index: 1000;
-  width: 330px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  width: 300px;
+  max-height: 95%;      /* <-- added */
+  overflow-y: auto;      /* <-- added */
 }
 .popup.hidden {
   display: none;
 }
 
-.popup-scrollable {
-  max-height: 650px;
-  overflow-y: auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-
-.popup-buttons {
-  position: sticky;
-  bottom: 0;
-  border-top: 1px solid #ccc;
-  background: #f9f9f9;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.popup-buttons button {
+.popup-content button {
+  width: 100%;
+  margin: 5px 0;
   padding: 8px;
-  background: #000000;
+  background: #007BFF;
   color: white;
   border: none;
   border-radius: 5px;
 }
-.popup-buttons button:hover {
-  background: #808080;
+.popup-content button:hover {
+  background: #0056b3;
 }
-
 .verse-selected {
   background-color: #d6ecff;
   border-left: 3px solid #007BFF;
@@ -838,21 +820,3 @@ font-size: 14px; /* Adjust the size as needed */
 
 
 
-.favorites-container {
-  max-height: 800px;
-  overflow-y: auto;
-  padding: 10px;
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.highlight-favorite {
-  background-color: #ffe8a1; /* light yellow */
-  border-left: 4px solid gold;
-}
-button.remove-btn {
-  float: right;
-  margin-left: 10px;
-}
