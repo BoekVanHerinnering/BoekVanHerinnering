@@ -137,20 +137,105 @@ function closePopup() {
 }
 
 function addToFavorites() {
-  const text = selectedVerses.map(v =>
-    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
-  ).join('\n\n');
-  alert("✅ Added to Favorites:\n\n" + text);
-  closePopup();
+  const existing = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    if (!el) return;
+
+    const bookTitle = el.dataset.book || "Onbekend";
+    const verseText = el.textContent || "";
+    const verseId = v.id;
+    const h2 = el.closest(".page")?.querySelector("h2");
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+    const pageId = el.closest(".page")?.id || "";
+
+    const favorite = {
+      id: verseId,
+      book: bookTitle,
+      text: verseText,
+      title: title,
+      pageId: pageId
+    };
+
+    // ✅ Prevent duplicates
+    if (!existing.some(f => f.id === verseId)) {
+      existing.push(favorite);
+    }
+  });
+
+  localStorage.setItem("favorites", JSON.stringify(existing));
+
+  // ✅ Redirect to favorites.html after saving
+  window.location.href = "favorites.html";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function previewVerse() {
   const text = selectedVerses.map(v =>
     `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
   ).join('\n\n');
-  alert("🔍 Preview:\n\n" + text);
-  closePopup();
+
+  // Get grouped HTML format (same as in updatePopupContent)
+  const container = document.createElement("div");
+  const grouped = {};
+
+  selectedVerses.forEach(v => {
+    const el = document.getElementById(v.id);
+    const pageDiv = el.closest(".page");
+    const h2 = pageDiv ? pageDiv.querySelector("h2") : null;
+    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
+
+    if (!grouped[title]) grouped[title] = [];
+    grouped[title].push(v);
+  });
+
+  Object.keys(grouped).forEach(title => {
+    const section = document.createElement("div");
+    section.innerHTML = `<h3>📖 ${title}</h3>`;
+    grouped[title].forEach(v => {
+      const line = document.createElement("div");
+      line.textContent = v.text;
+      section.appendChild(line);
+    });
+    container.appendChild(section);
+    container.appendChild(document.createElement("hr"));
+  });
+
+  const data = {
+    reference: "Die Boek Van Herinnering",
+    html: container.innerHTML
+  };
+
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  window.open(`preview.html?data=${encoded}`, "_blank");
+
+  // ✅ Clear highlights and verses after preview
+  clearSelectedVerses();
 }
+
+
+
 
 function clearSelectedVerses() {
   selectedVerses.forEach(v => {
@@ -168,7 +253,6 @@ function addMoreVerses() {
   // Just hide popup but keep selected verses
   document.getElementById("versePopup").classList.add("hidden");
 }
-
 
 
 

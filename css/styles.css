@@ -814,6 +814,10 @@ font-size: 14px; /* Adjust the size as needed */
   padding-left: 6px;
 }
 
+.highlight {
+  background-color: yellow;
+  transition: background-color 0.5s ease;
+}
 
 
 
