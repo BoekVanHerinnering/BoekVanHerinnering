@@ -170,9 +170,27 @@ function addToFavorites() {
   window.location.href = "favorites.html";
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const targetId = params.get("scrollTo");
+  if (targetId) {
+    // Show the correct page containing the verse
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      // Show parent chapter page
+      document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
+      const page = targetEl.closest(".page");
+      if (page) page.classList.remove("hidden");
 
-
-
+      // Scroll and highlight
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        targetEl.classList.add("highlighted"); // Add a class for highlighting
+        setTimeout(() => targetEl.classList.remove("highlighted"), 2000); // Remove after 2s
+      }, 300);
+    }
+  }
+});
 
 
 
