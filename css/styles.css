@@ -820,7 +820,23 @@ font-size: 14px; /* Adjust the size as needed */
 }
 
 
+.highlight-favorite {
+  outline: 2px solid gold;
+  background-color: #fffac4;
+}
 
-
-
-
+.torah-highlight {
+  background-color: #e6ffe6; /* light green */
+}
+.prophet-highlight {
+  background-color: #e6f0ff; /* light blue */
+}
+.writing-highlight {
+  background-color: #fff0e6; /* peach */
+}
+.gospel-highlight {
+  background-color: #fce6ff; /* lavender */
+}
+.letter-highlight {
+  background-color: #f2ffe6; /* pale yellow-green */
+}
