@@ -61,8 +61,6 @@ menuBtn.addEventListener('click', () => {
 
 
 
-
-
 let lastTapTime = 0;
 let selectedVerses = [];
 
@@ -70,18 +68,12 @@ document.querySelectorAll("p[data-verse]").forEach(verse => {
   verse.addEventListener("click", function () {
     const now = Date.now();
     if (now - lastTapTime < 400) {
-      const id = this.id; // e.g., "genésis_1_1"
+      const id = this.id;
       const [book, chapter, verseNum] = id.split("_");
       const verseText = this.textContent.trim();
 
       if (!selectedVerses.find(v => v.id === id)) {
-        selectedVerses.push({
-          id,
-          book,
-          chapter,
-          verse: verseNum,
-          text: verseText
-        });
+        selectedVerses.push({ id, book, chapter, verse: verseNum, text: verseText });
         this.classList.add("verse-selected");
       }
 
@@ -108,90 +100,199 @@ function updatePopupContent() {
     grouped[title].push(v);
   });
 
-  const titles = Object.keys(grouped);
-  titles.forEach((title, index) => {
+  Object.entries(grouped).forEach(([title, verses], index, arr) => {
     const titleDiv = document.createElement("div");
     titleDiv.innerHTML = `<h3 style="margin-bottom: 6px; font-weight: bold;">📖 ${title}</h3>`;
     container.appendChild(titleDiv);
 
-    grouped[title].forEach(v => {
+    verses.forEach(v => {
       const div = document.createElement("div");
       div.style.marginBottom = "6px";
       div.textContent = v.text;
       container.appendChild(div);
     });
 
-    if (index !== titles.length - 1) {
+    if (index !== arr.length - 1) {
       container.appendChild(document.createElement("hr"));
     }
   });
 }
 
-
-
-
-
 function closePopup() {
   document.getElementById("versePopup").classList.add("hidden");
-  clearSelectedVerses();
+  selectedVerses = [];
 }
 
 function addToFavorites() {
   const existing = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const newlyAdded = [];
 
   selectedVerses.forEach(v => {
     const el = document.getElementById(v.id);
     if (!el) return;
 
-    const bookTitle = el.dataset.book || "Onbekend";
-    const verseText = el.textContent || "";
-    const verseId = v.id;
-    const h2 = el.closest(".page")?.querySelector("h2");
-    const title = h2 ? h2.textContent.trim() : "📖 Onbekend";
-    const pageId = el.closest(".page")?.id || "";
+    const title = el.closest('.page')?.querySelector('h2')?.textContent.trim() || '';
+    const favorite = { id: v.id, title: title, text: v.text };
 
-    const favorite = {
-      id: verseId,
-      book: bookTitle,
-      text: verseText,
-      title: title,
-      pageId: pageId
-    };
-
-    // ✅ Prevent duplicates
-    if (!existing.some(f => f.id === verseId)) {
+    if (!existing.some(f => f.id === v.id)) {
       existing.push(favorite);
+      newlyAdded.push(v.id); // Collect newly added verse IDs
+      el.classList.add('highlight-favorite');
     }
   });
 
-  localStorage.setItem("favorites", JSON.stringify(existing));
+  if (newlyAdded.length > 0) {
+    sessionStorage.setItem("newFavoriteIds", JSON.stringify(newlyAdded));
+  }
 
-  // ✅ Redirect to favorites.html after saving
+  localStorage.setItem("favorites", JSON.stringify(existing));
   window.location.href = "favorites.html";
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const targetId = params.get("scrollTo");
-  if (targetId) {
-    // Show the correct page containing the verse
-    const targetEl = document.getElementById(targetId);
-    if (targetEl) {
-      // Show parent chapter page
-      document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
-      const page = targetEl.closest(".page");
-      if (page) page.classList.remove("hidden");
 
-      // Scroll and highlight
+
+// Highlight verses already saved in favorites
+// Call this function when the page loads to apply highlights based on category
+function highlightFavoritesCategorized() {
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  favorites.forEach(fav => {
+    const verseElem = document.getElementById(fav.id);
+    if (!verseElem) return;
+
+    verseElem.classList.add("highlight-favorite");
+
+    const id = fav.id.toLowerCase();
+
+    if (id.startsWith("genésis") || 
+        id.startsWith("exodus") || 
+        id.startsWith("levitikus") || 
+        id.startsWith("numeri") || 
+        id.startsWith("deuteronómium")) {
+      verseElem.classList.add("torah-highlight");
+    } else if (
+      id.startsWith("jehowshua") ||
+      id.startsWith("rigters") ||
+      id.startsWith("een_shemuel") ||
+      id.startsWith("twee_shemuel") ||
+      id.startsWith("een_konings") ||
+      id.startsWith("twee_konings") ||
+      id.startsWith("een_kronieke") ||
+      id.startsWith("twee_kronieke") ||
+      id.startsWith("opregte") ||
+      id.startsWith("een_makkabeers") ||
+      id.startsWith("twee_makkabeers")
+    ) {
+      verseElem.classList.add("prophet-highlight");
+    } else if (
+      id.startsWith("psalms") ||
+      id.startsWith("spreuke_van_salomo") ||
+      id.startsWith("prediker") ||
+      id.startsWith("hooglied_van_salomo") ||
+      id.startsWith("wyshied_van_salomo") ||
+      id.startsWith("odes_van_salomo") ||
+      id.startsWith("die_wysheid_van_jehôwshua_ben_sirah") ||
+      id.startsWith("rut") ||
+      id.startsWith("judit") ||
+      id.startsWith("ester") ||
+      id.startsWith("tobias") ||
+      id.startsWith("job")
+    ) {
+      verseElem.classList.add("writing-highlight");
+    } else if (
+      id.startsWith("henog") ||
+      id.startsWith("jôwel") ||
+      id.startsWith("amos") ||
+      id.startsWith("hoséa") ||
+      id.startsWith("miga") ||
+      id.startsWith("jeshajah") ||
+      id.startsWith("nahum") ||
+      id.startsWith("habakuk") ||
+      id.startsWith("sefanja") ||
+      id.startsWith("jeremia") ||
+      id.startsWith("klaagliedere_van_jeremia") ||
+      id.startsWith("barug") ||
+      id.startsWith("esegiël") ||
+      id.startsWith("daniël") ||
+      id.startsWith("een_esra") ||
+      id.startsWith("twee_esra") ||
+      id.startsWith("esra") ||
+      id.startsWith("obadja") ||
+      id.startsWith("haggai") ||
+      id.startsWith("sagaria") ||
+      id.startsWith("nehemia") ||
+      id.startsWith("maleagi")
+    ) {
+      verseElem.classList.add("gospel-highlight");
+    } else if (
+      id.startsWith("jakobus") ||
+      id.startsWith("thomas") ||
+      id.startsWith("lukas") ||
+      id.startsWith("mattithjahûw") ||
+      id.startsWith("markus") ||
+      id.startsWith("jehôwganan") ||
+      id.startsWith("petrus") ||
+      id.startsWith("nikodémus_deel_1") ||
+      id.startsWith("nikodémus_deel_2") ||
+      id.startsWith("handelinge_van_die_apostels") ||
+      id.startsWith("sendbriewe_van_abgarus_en_jahwèshua") ||
+      id.startsWith("hebreërs") ||
+      id.startsWith("die_brief_van_jakobus_aan_jisraeliete") ||
+      id.startsWith("eerste_brief_van_die_apostel_petrus") ||
+      id.startsWith("tweede_brief_van_die_apostel_petrus") ||
+      id.startsWith("eerste_brief_van_die_apostel_jehôwganan") ||
+      id.startsWith("tweede_brief_van_die_apostel_jehôwganan") ||
+      id.startsWith("derde_brief_van_die_apostel_jehôwganan") ||
+      id.startsWith("judas") ||
+      id.startsWith("openbaring_van_petrus") ||
+      id.startsWith("openbaring_van_jahwèshua") ||
+      id.startsWith("jubileum")
+    ) {
+      verseElem.classList.add("letter-highlight");
+    }
+  });
+}
+
+// Call this on page load
+window.addEventListener("DOMContentLoaded", highlightFavoritesCategorized);
+
+
+// Remove highlight if verse was deleted
+const removedId = sessionStorage.getItem("removedFavorite");
+if (removedId) {
+  const el = document.getElementById(removedId);
+  if (el) el.classList.remove("highlight-favorite");
+  sessionStorage.removeItem("removedFavorite");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  highlightFavoriteVerses();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Check for scrollTo parameter
+  const params = new URLSearchParams(window.location.search);
+  const scrollToId = params.get("scrollTo");
+  if (scrollToId) {
+    const el = document.getElementById(scrollToId);
+    if (el) {
+      const page = el.closest(".page");
+      if (page) {
+        document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
+        page.classList.remove("hidden");
+      }
+
       setTimeout(() => {
-        targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        targetEl.classList.add("highlighted"); // Add a class for highlighting
-        setTimeout(() => targetEl.classList.remove("highlighted"), 2000); // Remove after 2s
-      }, 300);
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // ❌ NO more removing the highlight after delay
+        // el.classList.add("highlight-favorite");
+        // setTimeout(() => el.classList.remove("highlight-favorite"), 2000);
+
+      }, 400);
     }
   }
 });
-
 
 
 
