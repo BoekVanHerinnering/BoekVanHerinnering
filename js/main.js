@@ -142,12 +142,13 @@ function addToFavorites() {
   });
 
   if (newlyAdded.length > 0) {
-    sessionStorage.setItem("newFavoriteIds", JSON.stringify(newlyAdded));
+    sessionStorage.setItem("newFavoriteIds", JSON.stringify(newlyAdded)); // Save multiple new IDs
   }
 
   localStorage.setItem("favorites", JSON.stringify(existing));
   window.location.href = "favorites.html";
 }
+
 
 
 
