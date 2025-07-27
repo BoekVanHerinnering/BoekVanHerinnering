@@ -121,6 +121,18 @@
   .highlight-btn {
     position: relative;
   }
+
+  .flash-highlight {
+  animation: flash 1s ease-in-out 3;
+}
+
+@keyframes flash {
+  0%   { background-color: #ffffcc; }
+  50%  { background-color: #ffeb3b; }
+  100% { background-color: transparent; }
+}
+
+
   .highlight-btn.color-yellow { background-color: #fff176; color: black; }
   .highlight-btn.color-green { background-color: #a5d6a7; color: black; }
   .highlight-btn.color-pink  { background-color: #f48fb1; color: black; }
@@ -359,6 +371,41 @@
 
   // Initial render
   renderFavorites();
+
+  
+  window.addEventListener("DOMContentLoaded", () => {
+  const newIdsRaw = sessionStorage.getItem("newFavoriteIds");
+  if (!newIdsRaw) return;
+
+  try {
+    const newIds = JSON.parse(newIdsRaw);
+    if (!Array.isArray(newIds)) return;
+
+    newIds.forEach((id, index) => {
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add("flash-highlight");
+
+        // Scroll only to the first newly added favorite
+        if (index === 0) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        setTimeout(() => {
+          target.classList.remove("flash-highlight");
+        }, 3000);
+      }
+    });
+  } catch (e) {
+    console.warn("Could not parse newFavoriteIds from sessionStorage");
+  }
+
+  sessionStorage.removeItem("newFavoriteIds");
+});
+
+
+
+
 </script>
 </body>
 </html>
