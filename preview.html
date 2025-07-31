@@ -2,158 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Verse Share Preview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <title>Verse Preview</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      height: 100%;
-      background-color: #222;
-      overflow: hidden;
-    }
-
-    .container {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      align-items: center;
+      padding: 1rem;
     }
-
-    .preview-wrapper {
-      flex: 1;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .background-container {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    #backgroundImage {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform-origin: center;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 2;
-    }
-
-    .verse-card {
-      position: relative;
-      z-index: 3;
-      margin: 10px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      max-height: 85%;
-      overflow-y: auto;
-    }
-
-    #verseText {
-      color: #111;
-      font-size: 1.1em;
-      line-height: 1.5;
-    }
-
     .controls {
-      background: #fff;
-      padding: 8px;
-      text-align: center;
-      border-top: 1px solid #ccc;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 400px;
     }
-
-    input[type="file"] {
-      display: none;
+    .preview-container {
+      position: relative;
+      width: 90vw;
+      height: 80vh;
+      max-width: 500px;
+      border: 2px solid #ccc;
+      background: #000; /* Black behind for better contrast */
+      overflow: hidden; /* Prevent scroll, clip overflow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    .button {
-      background: #007bff;
+    #background {
+      position: absolute;
+      top: 0; left: 0;
+      /* Fill container, but object-fit none means no scaling */
+      width: 100%;
+      height: 100%;
+      object-fit: none; /* Important! */
+      transform-origin: top left; /* So zoom/pan transform works from top-left */
+      cursor: grab;
+      z-index: 0;
+      user-select: none;
+    }
+    #overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      pointer-events: none;
+    }
+    #verseText {
+      position: relative;
+      z-index: 2;
       color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      margin: 5px;
-      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 1rem;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      max-height: 100%; /* Allow scrolling if verses too long */
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
     }
-
-    .button:hover {
-      background: #0056b3;
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="preview-wrapper">
-      <div class="background-container" id="panzoomContainer">
-        <img id="backgroundImage" src="your_default.jpg" alt="Background" />
-        <div class="overlay"></div>
-      </div>
-
-      <div class="verse-card">
-        <div id="verseText">Your selected verses will appear here...</div>
-      </div>
-    </div>
-
-    <div class="controls">
-      <label class="button">
-        📸 Upload Background
-        <input type="file" accept="image/*" id="imageUpload" />
-      </label>
+  <div class="controls">
+    <label>Upload Background Image:
+      <input type="file" id="upload" accept="image/*" />
+    </label>
+    <label>Font Size:
+      <input type="range" id="fontSize" min="12" max="48" value="20" />
+    </label>
+    <label>Font Color:
+      <input type="color" id="fontColor" value="#ffffff" />
+    </label>
+    <label>Overlay Opacity:
+      <input type="range" id="overlayOpacity" min="0" max="1" step="0.05" value="0.3" />
+    </label>
+    <div>
+      <button onclick="downloadImage()">📥 Download</button>
+      <button onclick="shareImage()">📤 Share</button>
     </div>
   </div>
 
+  <div class="preview-container" id="preview">
+    <img id="background" />
+    <div id="overlay"></div>
+    <div id="verseText">Loading verse...</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/panzoom@9.4.0/dist/panzoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
-    // Enable Panzoom on background
-    const panzoom = Panzoom(document.getElementById('backgroundImage'), {
-      contain: 'outside',
-      maxScale: 3,
-      minScale: 1,
+    const verseText = document.getElementById('verseText');
+    const background = document.getElementById('background');
+    const overlay = document.getElementById('overlay');
+
+    // Initialize Panzoom on background image
+    const panzoomInstance = panzoom(background, {
+      maxZoom: 5,
+      minZoom: 1,
+      bounds: true,
+      boundsPadding: 0.1,
+      // disableZoom: false,
+      // disablePan: false,
     });
 
-    document.getElementById('panzoomContainer').addEventListener('wheel', panzoom.zoomWithWheel);
+    // Prevent default drag for image to avoid conflict
+    background.addEventListener('dragstart', e => e.preventDefault());
 
-    // Load user background
-    document.getElementById('imageUpload').addEventListener('change', function (e) {
+    // Load verses from query param
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const data = params.get("data");
+
+      if (data) {
+        try {
+          const decoded = JSON.parse(decodeURIComponent(data));
+          verseText.innerHTML = decoded.html || "No verses provided";
+        } catch (e) {
+          console.error("Failed to load verse data:", e);
+          verseText.textContent = "Error loading verses.";
+        }
+      }
+    });
+
+    // Upload background image
+    document.getElementById('upload').addEventListener('change', e => {
       const file = e.target.files[0];
       if (file) {
         const reader = new FileReader();
-        reader.onload = function (evt) {
-          document.getElementById('backgroundImage').src = evt.target.result;
+        reader.onload = () => {
+          background.src = reader.result;
+
+          // Reset panzoom on new image
+          panzoomInstance.reset();
         };
         reader.readAsDataURL(file);
       }
     });
 
-    // Load verses from query parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const verses = urlParams.get('text') || '';
-    document.getElementById('verseText').textContent = decodeURIComponent(verses);
+    // Font size change
+    document.getElementById('fontSize').addEventListener('input', e => {
+      verseText.style.fontSize = e.target.value + 'px';
+    });
 
-    // Auto shrink font if verses are long
-    function autoAdjustFont() {
-      const textBox = document.getElementById('verseText');
-      const card = document.querySelector('.verse-card');
-      const originalFontSize = 1.1;
-      let fontSize = originalFontSize;
-      while (textBox.scrollHeight > card.clientHeight && fontSize > 0.6) {
-        fontSize -= 0.05;
-        textBox.style.fontSize = fontSize + 'em';
-      }
+    // Font color change
+    document.getElementById('fontColor').addEventListener('input', e => {
+      verseText.style.color = e.target.value;
+    });
+
+    // Overlay opacity change
+    document.getElementById('overlayOpacity').addEventListener('input', e => {
+      overlay.style.background = `rgba(0,0,0,${e.target.value})`;
+    });
+
+    // Download the preview as image
+    function downloadImage() {
+      html2canvas(document.getElementById('preview')).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'verse-preview.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
     }
 
-    window.onload = autoAdjustFont;
+    // Share the preview image (if supported)
+    function shareImage() {
+      html2canvas(document.getElementById('preview')).then(canvas => {
+        canvas.toBlob(blob => {
+          const file = new File([blob], 'verse-preview.png', { type: 'image/png' });
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            navigator.share({ files: [file], title: 'Verse Preview' });
+          } else {
+            alert('Sharing not supported on this device');
+          }
+        });
+      });
+    }
   </script>
 </body>
 </html>
-

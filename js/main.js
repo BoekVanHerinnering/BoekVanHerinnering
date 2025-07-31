@@ -311,12 +311,57 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-function previewVerse() {
-  const text = selectedVerses.map(v =>
-    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
-  ).join('\n\n');
 
-  // Get grouped HTML format (same as in updatePopupContent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function previewVerse() {
   const container = document.createElement("div");
   const grouped = {};
 
@@ -348,11 +393,12 @@ function previewVerse() {
   };
 
   const encoded = encodeURIComponent(JSON.stringify(data));
-  window.open(`preview.html?data=${encoded}`, "_blank");
+  window.location.href = `preview.html?data=${encoded}`;
 
-  // ✅ Clear highlights and verses after preview
   clearSelectedVerses();
 }
+
+
 
 
 
