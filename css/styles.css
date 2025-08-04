@@ -52,11 +52,28 @@ button:hover {
             font-size: 12px;
             color: #555;
         }
-	h4 {
+
+	    h4 {
             font-family: 'Times New Roman', serif; /* Change the font for h4 */
             font-size: 12px;
             color: black;
         }
+
+        h5 {
+            font-family: 'Verdana'; /* Change the font for h2 */
+            text-align: center;
+            padding: 10px 20px;
+            border: 4px solid #000000;
+            border-radius: 10px;
+            background-color: #f0f8ff;
+            color: #000000;
+            font-weight: bold;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            margin: 7px;
+            
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f3f3f3;
@@ -840,3 +857,33 @@ font-size: 14px; /* Adjust the size as needed */
 .letter-highlight {
   background-color: #f2ffe6; /* pale yellow-green */
 }
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.chapter-container {
+  max-width: 270px; /* 4 buttons * 60px + margins */
+  text-align: center;
+}
+
+button[data-btn="chapter"] {
+  width: 60px;
+  height: 60px;
+  margin: 9.5px;
+  background-color: #000000;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  
+}
+
+button[data-btn="chapter"]:hover {
+  background-color: #808080;
+}
+
+

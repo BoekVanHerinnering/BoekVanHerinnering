@@ -1,195 +1,441 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Verse Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      background: #f3f3f3;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 1rem;
+      min-height: 100vh;
+      padding: 50px;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
     }
-    .controls {
-      margin-bottom: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+
+    #appName {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #664e27;
+      text-shadow: 1px 1px 2px #d7c89a;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #verseCard {
       width: 100%;
       max-width: 400px;
-    }
-    .preview-container {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
       position: relative;
-      width: 90vw;
-      height: 80vh;
-      max-width: 500px;
-      border: 2px solid #ccc;
-      background: #000; /* Black behind for better contrast */
-      overflow: hidden; /* Prevent scroll, clip overflow */
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+      margin-bottom: 15px;
+      background-color: #222;
+      min-height: 300px;
       display: flex;
+      flex-direction: column;
+    }
+
+    #appNameInImage {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 1px 1px 2px black;
+      padding: 5px 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    #verseText {
+      background-color: rgba(0,0,0,0.4);
+      padding: 10px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+      user-select: text;
+      -webkit-user-select: text;
+      outline: none;
+      margin: 10px 0;
+      flex-grow: 1;
+      overflow-y: auto;
+      min-height: 150px;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    #downloadLinkInImage {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #664e27;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: auto;
+      z-index: 10;
+      white-space: nowrap;
+    }
+
+    #controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
       justify-content: center;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      user-select: none;
+      -webkit-user-select: none;
       align-items: center;
     }
-    #background {
-      position: absolute;
-      top: 0; left: 0;
-      /* Fill container, but object-fit none means no scaling */
-      width: 100%;
-      height: 100%;
-      object-fit: none; /* Important! */
-      transform-origin: top left; /* So zoom/pan transform works from top-left */
-      cursor: grab;
-      z-index: 0;
-      user-select: none;
+
+    input[type="file"] {
+      display: none;
     }
-    #overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      pointer-events: none;
-    }
-    #verseText {
-      position: relative;
-      z-index: 2;
+
+    .btn {
+      background-color: #007BFF;
       color: white;
-      font-size: 1.2rem;
-      padding: 1rem;
-      white-space: pre-wrap;
-      overflow-y: auto;
-      max-height: 100%; /* Allow scrolling if verses too long */
-      width: 100%;
-      text-align: center;
-      box-sizing: border-box;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-weight: 600;
+      font-family: Arial, sans-serif;
       cursor: pointer;
+      min-width: 110px;
+      text-align: center;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      -webkit-user-select: none;
+      display: inline-block;
+      margin: 4px 2px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    #pageScrollSlider {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 400px;
+      height: 20px;
+      appearance: none;
+      -webkit-appearance: none;
+      background: #ddd;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    #pageScrollSlider::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #0011ff;
+      cursor: pointer;
+      border: 2px solid #09ff00;
+      transition: background-color 0.3s;
+    }
+
+    #pageScrollSlider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ff0000;
+      border: 2px solid #d7c89a;
+      cursor: pointer;
+    }
+
+    #pageScrollSlider:hover::-webkit-slider-thumb {
+      background-color: #ff0000;
+    }
+
+    #pageScrollSlider:hover::-moz-range-thumb {
+      background-color: #a65252;
     }
   </style>
 </head>
 <body>
-  <div class="controls">
-    <label>Upload Background Image:
-      <input type="file" id="upload" accept="image/*" />
-    </label>
-    <label>Font Size:
-      <input type="range" id="fontSize" min="12" max="48" value="20" />
-    </label>
-    <label>Font Color:
-      <input type="color" id="fontColor" value="#ffffff" />
-    </label>
-    <label>Overlay Opacity:
-      <input type="range" id="overlayOpacity" min="0" max="1" step="0.05" value="0.3" />
-    </label>
-    <div>
-      <button onclick="downloadImage()">📥 Download</button>
-      <button onclick="shareImage()">📤 Share</button>
-    </div>
+
+  <div id="controls">
+    <button class="btn" onclick="window.location.href='index.html'">🏠 Home</button>
+    <label for="bgUpload" class="btn">Upload BG</label>
+    <input type="file" id="bgUpload" accept="image/*" title="Upload background image" />
+    <button id="downloadBtn" class="btn">📥 Download</button>
+    <button id="shareBtn" class="btn">🔗 Share</button>
+
+    <label for="textBgColor" title="Text Background Color">Text BG</label>
+    <input type="color" id="textBgColor" value="#000000" title="Text background color" style="width:40px; height:30px; border:none;" />
+    <input type="range" id="textBgOpacity" min="0" max="100" value="40" title="Text background opacity" style="width:80px;" />
+
+    <label for="textColor" title="Text Color">Text Color</label>
+    <input type="color" id="textColor" value="#ffffff" title="Text color" style="width:40px; height:30px; border:none;" />
+
+    <label for="fontFamily" title="Font Family">Font</label>
+    <select id="fontFamily" title="Font family" style="min-width: 120px;">
+      <option value="Arial, sans-serif" selected>Arial</option>
+      <option value="'Times New Roman', serif">Times New Roman</option>
+      <option value="'Georgia', serif">Georgia</option>
+      <option value="'Courier New', monospace">Courier New</option>
+      <option value="'Verdana', sans-serif">Verdana</option>
+      <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+      <option value="'Lucida Console', monospace">Lucida Console</option>
+    </select>
+
+    <label for="fontSize" title="Font Size">Size</label>
+    <input type="range" id="fontSize" min="12" max="20" value="12" title="Font size" style="width:80px;" />
   </div>
 
-  <div class="preview-container" id="preview">
-    <img id="background" />
-    <div id="overlay"></div>
-    <div id="verseText">Loading verse...</div>
+  <input type="range" id="pageScrollSlider" min="0" max="100" value="0" />
+
+  <div id="verseCard">
+    <div id="appNameInImage">📖 Die Boek Van Herinnering</div>
+    <div id="verseText" contenteditable="true" spellcheck="false">📖 Loading verse...</div>
+    <a href="https://drive.google.com/uc?export=download&id=1afP3HY0AohMsfNXl6Wv-FnrMZBZiyybo"
+       target="_blank"
+       rel="noopener"
+       id="downloadLinkInImage"
+       class="btn"
+       style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding:5px 10px; font-size:14px; color:#664e27; background-color:#ffd1dc; user-select:none; pointer-events:auto; white-space:nowrap; text-decoration:none; box-shadow:none;">⬇️ Download App</a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/panzoom@9.4.0/dist/panzoom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script>
     const verseText = document.getElementById('verseText');
-    const background = document.getElementById('background');
-    const overlay = document.getElementById('overlay');
+    const verseCard = document.getElementById('verseCard');
+    const bgUpload = document.getElementById('bgUpload');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const shareBtn = document.getElementById('shareBtn');
+    const pageScrollSlider = document.getElementById('pageScrollSlider');
 
-    // Initialize Panzoom on background image
-    const panzoomInstance = panzoom(background, {
-      maxZoom: 5,
-      minZoom: 1,
-      bounds: true,
-      boundsPadding: 0.1,
-      // disableZoom: false,
-      // disablePan: false,
-    });
+    const textBgColorInput = document.getElementById('textBgColor');
+    const textBgOpacityInput = document.getElementById('textBgOpacity');
+    const textColorInput = document.getElementById('textColor');
+    const fontFamilySelect = document.getElementById('fontFamily');
+    const fontSizeRange = document.getElementById('fontSize');
 
-    // Prevent default drag for image to avoid conflict
-    background.addEventListener('dragstart', e => e.preventDefault());
+    const scrollElement = document.documentElement;
 
-    // Load verses from query param
-    window.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const data = params.get("data");
-
-      if (data) {
-        try {
-          const decoded = JSON.parse(decodeURIComponent(data));
-          verseText.innerHTML = decoded.html || "No verses provided";
-        } catch (e) {
-          console.error("Failed to load verse data:", e);
-          verseText.textContent = "Error loading verses.";
-        }
+    // Load verse text from ?data param
+    const params = new URLSearchParams(window.location.search);
+    const rawData = params.get("data");
+    if (rawData) {
+      try {
+        const decoded = JSON.parse(decodeURIComponent(rawData));
+        verseText.innerHTML = decoded.html;
+      } catch (e) {
+        verseText.innerText = "Error loading verse.";
       }
-    });
-
-    // Upload background image
-    document.getElementById('upload').addEventListener('change', e => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = () => {
-          background.src = reader.result;
-
-          // Reset panzoom on new image
-          panzoomInstance.reset();
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
-    // Font size change
-    document.getElementById('fontSize').addEventListener('input', e => {
-      verseText.style.fontSize = e.target.value + 'px';
-    });
-
-    // Font color change
-    document.getElementById('fontColor').addEventListener('input', e => {
-      verseText.style.color = e.target.value;
-    });
-
-    // Overlay opacity change
-    document.getElementById('overlayOpacity').addEventListener('input', e => {
-      overlay.style.background = `rgba(0,0,0,${e.target.value})`;
-    });
-
-    // Download the preview as image
-    function downloadImage() {
-      html2canvas(document.getElementById('preview')).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'verse-preview.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-      });
     }
 
-    // Share the preview image (if supported)
-    function shareImage() {
-      html2canvas(document.getElementById('preview')).then(canvas => {
-        canvas.toBlob(blob => {
-          const file = new File([blob], 'verse-preview.png', { type: 'image/png' });
+    function updateTextBg() {
+      const color = textBgColorInput.value;
+      const opacity = textBgOpacityInput.value / 100;
+      verseText.style.backgroundColor = hexToRGBA(color, opacity);
+    }
+
+    function updateTextColor() {
+      verseText.style.color = textColorInput.value;
+    }
+
+    function updateFontFamily() {
+      verseText.style.fontFamily = fontFamilySelect.value;
+    }
+
+    function updateFontSize() {
+      verseText.style.fontSize = fontSizeRange.value + "px";
+      updateScrollSliderMax();
+    }
+
+    function hexToRGBA(hex, alpha) {
+      const r = parseInt(hex.slice(1,3), 16);
+      const g = parseInt(hex.slice(3,5), 16);
+      const b = parseInt(hex.slice(5,7), 16);
+      return `rgba(${r},${g},${b},${alpha})`;
+    }
+
+    function updateScrollSliderMax() {
+      pageScrollSlider.max = scrollElement.scrollHeight - window.innerHeight;
+    }
+
+    window.addEventListener('load', updateScrollSliderMax);
+    window.addEventListener('resize', updateScrollSliderMax);
+
+    textBgColorInput.addEventListener('input', updateTextBg);
+    textBgOpacityInput.addEventListener('input', updateTextBg);
+    textColorInput.addEventListener('input', updateTextColor);
+    fontFamilySelect.addEventListener('change', updateFontFamily);
+    fontSizeRange.addEventListener('input', updateFontSize);
+
+    // background image handling
+    bgUpload.addEventListener("change", event => {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        verseCard.style.backgroundImage = `url(${e.target.result})`;
+        scale = 1;
+        posX = 0;
+        posY = 0;
+        lastScale = 1;
+        verseCard.style.backgroundSize = '100% auto';
+        verseCard.style.backgroundPosition = `center center`;
+        verseCard.style.transform = 'none';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // background zoom/drag
+    let scale = 1, posX = 0, posY = 0, lastScale = 1, startX, startY;
+    let isDragging = false;
+
+    function updateBackgroundTransform() {
+      verseCard.style.backgroundSize = `${lastScale * 100}% auto`;
+      verseCard.style.backgroundPosition = `${posX}px ${posY}px`;
+    }
+
+    verseCard.addEventListener("mousedown", e => {
+      isDragging = true;
+      startX = e.clientX - posX;
+      startY = e.clientY - posY;
+      verseCard.style.cursor = "grabbing";
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+      verseCard.style.cursor = "default";
+    });
+
+    window.addEventListener("mousemove", e => {
+      if (!isDragging) return;
+      posX = e.clientX - startX;
+      posY = e.clientY - startY;
+      updateBackgroundTransform();
+    });
+
+    verseCard.addEventListener("wheel", e => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.1 : -0.1;
+      scale = Math.min(Math.max(1, scale + delta), 3);
+      lastScale = scale;
+      updateBackgroundTransform();
+    });
+
+    // touch zoom/pan
+    let initialDistance = 0, initialScale = 1;
+    verseCard.addEventListener('touchstart', e => {
+      if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        initialDistance = Math.hypot(dx, dy);
+        initialScale = lastScale;
+      } else if (e.touches.length === 1) {
+        isDragging = true;
+        const touch = e.touches[0];
+        startX = touch.clientX - posX;
+        startY = touch.clientY - posY;
+      }
+    });
+
+    verseCard.addEventListener('touchmove', e => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const newDistance = Math.hypot(dx, dy);
+        let newScale = initialScale * (newDistance / initialDistance);
+        newScale = Math.min(Math.max(1, newScale), 3);
+        lastScale = newScale;
+        scale = newScale;
+        verseCard.style.backgroundSize = `${newScale * 100}% auto`;
+      } else if (e.touches.length === 1 && isDragging) {
+        const touch = e.touches[0];
+        posX = touch.clientX - startX;
+        posY = touch.clientY - startY;
+        updateBackgroundTransform();
+      }
+    }, { passive: false });
+
+    verseCard.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // download image
+    downloadBtn.addEventListener("click", () => {
+      html2canvas(verseCard, { scale: 2, useCORS: true }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "verse-preview.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+
+    // share
+    shareBtn.addEventListener("click", () => {
+      html2canvas(verseCard, { scale: 2, useCORS: true }).then(canvas => {
+        canvas.toBlob(async blob => {
+          const file = new File([blob], "verse.png", { type: "image/png" });
           if (navigator.canShare && navigator.canShare({ files: [file] })) {
-            navigator.share({ files: [file], title: 'Verse Preview' });
+            try {
+              await navigator.share({
+                files: [file],
+                title: "Verse",
+                text: "Shared from Die Boek Van Herinnering",
+              });
+            } catch (err) {
+              alert("Sharing failed or canceled.");
+            }
           } else {
-            alert('Sharing not supported on this device');
+            alert("Sharing not supported on this device.");
           }
         });
       });
-    }
+    });
+
+    // slider sync
+    pageScrollSlider.addEventListener('input', () => {
+      scrollElement.scrollTop = pageScrollSlider.value;
+    });
+
+    window.addEventListener('scroll', () => {
+      pageScrollSlider.value = scrollElement.scrollTop;
+    });
+
   </script>
 </body>
 </html>

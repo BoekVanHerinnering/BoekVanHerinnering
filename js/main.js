@@ -362,6 +362,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 function previewVerse() {
+  const text = selectedVerses.map(v =>
+    `${capitalize(v.book)} ${v.chapter}:${v.verse} - ${v.text}`
+  ).join('\n\n');
+
   const container = document.createElement("div");
   const grouped = {};
 
@@ -393,9 +397,9 @@ function previewVerse() {
   };
 
   const encoded = encodeURIComponent(JSON.stringify(data));
-  window.location.href = `preview.html?data=${encoded}`;
+  window.open(`preview.html?data=${encoded}`, "_blank");
 
-  clearSelectedVerses();
+  clearSelectedVerses(); // optional: clear after preview
 }
 
 
@@ -1052,7 +1056,7 @@ function showGenesisComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('genésis_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showExodusComment() {
@@ -1062,7 +1066,7 @@ function showExodusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('exodus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showLevitikusComment() {
@@ -1072,7 +1076,7 @@ function showLevitikusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('levitikus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showNumeriComment() {
@@ -1082,7 +1086,7 @@ function showNumeriComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('numeri_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showDeuteronómiumComment() {
@@ -1092,7 +1096,7 @@ function showDeuteronómiumComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('deuteronómium_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJehowshuaComment() {
@@ -1102,7 +1106,7 @@ function showJehowshuaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jehowshua_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showRigtersComment() {
@@ -1112,7 +1116,7 @@ function showRigtersComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('rigters_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEenShemuelComment() {
@@ -1122,7 +1126,7 @@ function showEenShemuelComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('een_shemuel_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweeShemuelComment() {
@@ -1132,7 +1136,7 @@ function showTweeShemuelComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('twee_shemuel_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEenKoningsComment() {
@@ -1142,7 +1146,7 @@ function showEenKoningsComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('een_konings_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweeKoningsComment() {
@@ -1152,7 +1156,7 @@ function showTweeKoningsComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('twee_konings_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEenKroniekeComment() {
@@ -1162,7 +1166,7 @@ function showEenKroniekeComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('een_kronieke_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweeKroniekeComment() {
@@ -1172,7 +1176,7 @@ function showTweeKroniekeComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('twee_kronieke_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showOpregteComment() {
@@ -1182,7 +1186,7 @@ function showOpregteComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('opregte_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEenMakkabeersComment() {
@@ -1192,7 +1196,7 @@ function showEenMakkabeersComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('een_makkabeers_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweeMakkabeersComment() {
@@ -1202,7 +1206,7 @@ function showTweeMakkabeersComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('twee_makkabeers_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showPsalmsComment() {
@@ -1212,7 +1216,7 @@ function showPsalmsComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('psalms_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showSpreukeVanSalomoComment() {
@@ -1222,7 +1226,7 @@ function showSpreukeVanSalomoComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('spreuke_van_salomo_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showPredikerComment() {
@@ -1232,7 +1236,7 @@ function showPredikerComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('prediker_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHoogliedVanSalomoComment() {
@@ -1242,7 +1246,7 @@ function showHoogliedVanSalomoComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('hooglied_van_salomo_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showWyshiedVanSalomoComment() {
@@ -1252,7 +1256,7 @@ function showWyshiedVanSalomoComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('wyshied_van_salomo_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showOdesVanSalomoComment() {
@@ -1262,7 +1266,7 @@ function showOdesVanSalomoComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('odes_van_salomo_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showDieWysheidVanJehôwshuaBenSirahComment() {
@@ -1272,7 +1276,7 @@ function showDieWysheidVanJehôwshuaBenSirahComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('die_wysheid_van_jehôwshua_ben_sirah_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showRutComment() {
@@ -1282,7 +1286,7 @@ function showRutComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('rut_chapterpage');
-    }, 2000);
+    }, 0);
 }   
 
 function showJuditComment() {
@@ -1292,7 +1296,7 @@ function showJuditComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('judit_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEsterComment() {
@@ -1302,7 +1306,7 @@ function showEsterComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('ester_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTobiasComment() {
@@ -1312,7 +1316,7 @@ function showTobiasComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('tobias_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJobComment() {
@@ -1322,7 +1326,7 @@ function showJobComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('job_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHenogComment() {
@@ -1332,7 +1336,7 @@ function showHenogComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('henog_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showOpenbaringVanHenogComment() {
@@ -1342,7 +1346,7 @@ function showOpenbaringVanHenogComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('openbaring_van_henog_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJôWElComment() {
@@ -1352,7 +1356,7 @@ function showJôWElComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jôwel_chapterpage');
-    }, 2000);
+    }, 0);
 }
     
 
@@ -1364,7 +1368,7 @@ function showJonaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jona_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showAmosComment() {
@@ -1374,7 +1378,7 @@ function showAmosComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('amos_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 
@@ -1385,7 +1389,7 @@ function showHoséaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('hoséa_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showMigaComment() {
@@ -1395,7 +1399,7 @@ function showMigaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('miga_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJeshajahComment() {
@@ -1405,7 +1409,7 @@ function showJeshajahComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jeshajah_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showNahumComment() {
@@ -1415,7 +1419,7 @@ function showNahumComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('nahum_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHabakukComment() {
@@ -1425,7 +1429,7 @@ function showHabakukComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('habakuk_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showSefanjaComment() {
@@ -1435,7 +1439,7 @@ function showSefanjaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('sefanja_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJeremiaComment() {
@@ -1445,7 +1449,7 @@ function showJeremiaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jeremia_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showKlaagliedereVanJeremiaComment() {
@@ -1455,7 +1459,7 @@ function showKlaagliedereVanJeremiaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('klaagliedere_van_jeremia_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showBarugComment() {
@@ -1465,7 +1469,7 @@ function showBarugComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('barug_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEsegiëlComment() {
@@ -1475,7 +1479,7 @@ function showEsegiëlComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('esegiël_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showDaniëlComment() {
@@ -1485,7 +1489,7 @@ function showDaniëlComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('daniël_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEenEsraComment() {
@@ -1495,7 +1499,7 @@ function showEenEsraComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('een_esra_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweeEsraComment() {
@@ -1505,7 +1509,7 @@ function showTweeEsraComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('twee_esra_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEsraComment() {
@@ -1515,7 +1519,7 @@ function showEsraComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('esra_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showObadjaComment() {
@@ -1525,7 +1529,7 @@ function showObadjaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('obadja_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHaggaiComment() {
@@ -1535,7 +1539,7 @@ function showHaggaiComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('haggai_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showSagariaComment() {
@@ -1545,7 +1549,7 @@ function showSagariaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('sagaria_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showNehemiaComment() {
@@ -1555,7 +1559,7 @@ function showNehemiaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('nehemia_chapterpage');
-    }, 2000);
+    }, 0);
 }   
 function showMaleagiComment() {
     const comment = document.getElementById('maleagiComment');
@@ -1564,7 +1568,7 @@ function showMaleagiComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('maleagi_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJakobusComment() {
@@ -1574,7 +1578,7 @@ function showJakobusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jakobus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showThomasComment() {
@@ -1584,7 +1588,7 @@ function showThomasComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('thomas_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showLukasComment() {
@@ -1594,7 +1598,7 @@ function showLukasComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('lukas_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showMattithjahûwComment() {
@@ -1604,7 +1608,7 @@ function showMattithjahûwComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('mattithjahûw_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showMarkusComment() {
@@ -1614,7 +1618,7 @@ function showMarkusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('markus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJehôwgananComment() {
@@ -1624,7 +1628,7 @@ function showJehôwgananComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jehôwganan_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showPetrusComment() {
@@ -1634,7 +1638,7 @@ function showPetrusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('petrus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showNikodémusDeel1Comment() {
@@ -1644,7 +1648,7 @@ function showNikodémusDeel1Comment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('nikodémus_deel_1_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showNikodémusDeel2Comment() {
@@ -1654,7 +1658,7 @@ function showNikodémusDeel2Comment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('nikodémus_deel_2_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHandelingeVanDieApostelsComment() {
@@ -1664,7 +1668,7 @@ function showHandelingeVanDieApostelsComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('handelinge_van_die_apostels_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showSendbrieweVanAbgarusEnJahwèshuaComment() {
@@ -1674,7 +1678,7 @@ function showSendbrieweVanAbgarusEnJahwèshuaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('sendbriewe_van_abgarus_en_jahwèshua_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showHebreërsComment() {
@@ -1684,7 +1688,7 @@ function showHebreërsComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('hebreërs_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showDieBriefVanJakobusAanJisraelieteComment() {
@@ -1694,7 +1698,7 @@ function showDieBriefVanJakobusAanJisraelieteComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('die_brief_van_jakobus_aan_jisraeliete_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEersteBriefVanDieApostelPetrusComment() {
@@ -1704,7 +1708,7 @@ function showEersteBriefVanDieApostelPetrusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('eerste_brief_van_die_apostel_petrus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweedeBriefVanDieApostelPetrusComment() {
@@ -1714,7 +1718,7 @@ function showTweedeBriefVanDieApostelPetrusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('tweede_brief_van_die_apostel_petrus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showEersteBriefVanDieApostelJehôwgananComment() {
@@ -1724,7 +1728,7 @@ function showEersteBriefVanDieApostelJehôwgananComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('eerste_brief_van_die_apostel_jehôwganan_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showTweedeBriefVanDieApostelJehôwgananComment() {
@@ -1734,7 +1738,7 @@ function showTweedeBriefVanDieApostelJehôwgananComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('tweede_brief_van_die_apostel_jehôwganan_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showDerdeBriefVanDieApostelJehôwgananComment() {
@@ -1744,7 +1748,7 @@ function showDerdeBriefVanDieApostelJehôwgananComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('derde_brief_van_die_apostel_jehôwganan_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJudasComment() {
@@ -1754,7 +1758,7 @@ function showJudasComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('judas_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showOpenbaringVanPetrusComment() {
@@ -1764,7 +1768,7 @@ function showOpenbaringVanPetrusComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('openbaring_van_petrus_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showOpenbaringVanJahwèshuaComment() {
@@ -1774,7 +1778,7 @@ function showOpenbaringVanJahwèshuaComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('openbaring_van_jahwèshua_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 function showJubileumComment() {
@@ -1784,7 +1788,7 @@ function showJubileumComment() {
     setTimeout(() => {
         comment.style.display = 'none';
         navigate('jubileum_chapterpage');
-    }, 2000);
+    }, 0);
 }
 
 
