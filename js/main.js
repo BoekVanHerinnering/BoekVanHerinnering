@@ -49,6 +49,13 @@ menuBtn.addEventListener('click', () => {
   }
 });
 
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+closeMenuBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+  menuBtn.textContent = '🔵 Menu';
+  menuBtn.classList.remove('open');
+});
 
 
 
@@ -930,20 +937,75 @@ searchBar.addEventListener('input', () => {
 
 
 
+// === SETTINGS POPUP TOGGLE ===
+function toggleSettings() {
+  const popup = document.getElementById('settingsPopup');
+  if (popup.classList.contains('hidden')) {
+    popup.classList.remove('hidden');  // Open popup
+  } else {
+    popup.classList.add('hidden');     // Close popup
+  }
+}
 
 
+function closeSettings() {
+  document.getElementById('settingsPopup').classList.add('hidden');
+}
 
+const fontSizeSlider = document.getElementById('font-size-slider');
+const fontSizeValue = document.getElementById('fontSizeValue');
+const menuContainer = document.getElementById('menu'); // menu buttons container
 
+let closeTimeout;  // <-- Declare this here
 
+function applyFontSize(size) {
+  // Change all verse font sizes
+  document.querySelectorAll('p[data-verse]').forEach(p => {
+    p.style.fontSize = size + 'px';
+  });
 
+  // Change font size of ALL buttons
+  document.querySelectorAll('button').forEach(btn => {
+    btn.style.fontSize = size + 'px';
+  });
 
+  fontSizeValue.textContent = size + 'px';
+}
 
+// Combine all DOMContentLoaded actions here:
+window.addEventListener('DOMContentLoaded', () => {
+  // Load and apply saved font size
+  const savedSize = localStorage.getItem('fontSize') || '20';
+  fontSizeSlider.value = savedSize;
+  applyFontSize(savedSize);
+});
 
+// Change font size as user moves slider
+fontSizeSlider.addEventListener('input', () => {
+  const size = fontSizeSlider.value;
+  localStorage.setItem('fontSize', size);
+  applyFontSize(size);
 
+  // Clear previous timer
+  if (closeTimeout) clearTimeout(closeTimeout);
 
+  // Set new timer to close popup after 500ms of no input
+  closeTimeout = setTimeout(() => {
+    closeSettings();
+  }, 500);
+});
 
-
-
+function navigate(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.add('hidden');
+  });
+  // Show the target page
+  const targetPage = document.getElementById(pageId);
+  if (targetPage) {
+    targetPage.classList.remove('hidden');
+  }
+}
 
 
 
