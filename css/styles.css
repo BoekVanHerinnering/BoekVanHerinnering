@@ -248,6 +248,22 @@ color: white;
 
 
        
+#toggleNoteBtn {
+    background-color: #000000;
+    left: -10px;
+  color: white;              /* White text */
+  width: 316px;              /* Set width */
+  margin: 5px 0px 0px 2px;         /* Centered margin */
+  padding: 10px;             /* Optional: Add padding */
+  border: none;              /* No border */
+  border-radius: 5px;        /* Rounded corners */
+  font-size: 16px;           /* Font size */
+  cursor: pointer; 
+}
+
+#toggleNoteBtn:hover {
+    background-color: #858585;
+}
 
 
 .notepad-container {
@@ -728,7 +744,7 @@ font-size: 14px; /* Adjust the size as needed */
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 24px;
   cursor: pointer;
 }
@@ -740,7 +756,7 @@ font-size: 14px; /* Adjust the size as needed */
 /* MENU CONTAINER */
 #menu {
   position: absolute;
-  top: 199px; /* below ☰ button */
+  top: 102px; /* below ☰ button */
   left: center;
   width: 320px;
   background-color: white;
@@ -751,7 +767,7 @@ font-size: 14px; /* Adjust the size as needed */
   transform-origin: top;
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 99;
+  z-index: 199;
   pointer-events: none; /* block clicks when hidden */
 }
 
@@ -784,6 +800,15 @@ font-size: 14px; /* Adjust the size as needed */
 
 
 
+#closeMenuBtn {
+  background-color: #000000;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#closeMenuBtn:hover {
+  background-color: #919191;
+}
 
 
 
@@ -887,3 +912,42 @@ button[data-btn="chapter"]:hover {
 }
 
 
+/* Settings Popup Style (uses your existing .popup layout) */
+#settingsPopup {
+  transition: opacity 0.3s ease;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* Font size slider style */
+#font-size-slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Optional: display font size value */
+#fontSizeValue {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#settingsBtn {
+  background-color: hsl(0, 0%, 0%); /* Blue background */
+  left: -10px;
+  color: white;              /* White text */
+  width: 316px;              /* Set width */
+  margin: 0px 0px 0px 2px;         /* Centered margin */
+  padding: 10px;             /* Optional: Add padding */
+  border: none;              /* No border */
+  border-radius: 5px;        /* Rounded corners */
+  font-size: 16px;           /* Font size */
+  cursor: pointer;           /* Pointer on hover */
+}
+
+#settingsBtn:hover {
+  background-color: #858585; /* Darker on hover */
+}
