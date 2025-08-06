@@ -939,56 +939,6 @@ searchBar.addEventListener('input', () => {
 
 
 
-function toggleFontMenu() {
-    const dropdown = document.getElementById('fontDropdown');
-    dropdown.classList.toggle('hidden');
-}
-
-
-
-function changeFontSize(fontSize) {
-  applyFontSize(fontSize);
-  localStorage.setItem('fontSize', fontSize);
-}
-
-function applyFontSize(fontSize) {
-  const targets = document.querySelectorAll(
-    '.page, button, input, select, textarea, label, .button, .searchbar, .search-result, .sticky-header'
-  );
-
-  targets.forEach(element => {
-    element.style.fontSize = fontSize;
-  });
-}
-
-// Auto-apply saved font size when app loads
-window.addEventListener('DOMContentLoaded', () => {
-  const savedFontSize = localStorage.getItem('fontSize');
-  if (savedFontSize) {
-    applyFontSize(savedFontSize);
-    const fontSizeSlider = document.getElementById('fontSizeRange');
-    if (fontSizeSlider) {
-      fontSizeSlider.value = parseInt(savedFontSize); // e.g. "16px" → 16
-    }
-  }
-});
-
-// Toggle Settings dropdown open/close
-document.getElementById('settingsBtn').addEventListener('click', () => {
-  const dropdown = document.getElementById('settingsDropdown');
-  dropdown.classList.toggle('hidden');
-
-  const btn = document.getElementById('settingsBtn');
-  btn.textContent = dropdown.classList.contains('hidden')
-    ? '⚙️ Settings ▼'
-    : '⚙️ Settings ▲';
-});
-const dropdown = document.getElementById('settingsDropdown');
-dropdown.classList.toggle('show');
-
-
-
-
 
 
 
