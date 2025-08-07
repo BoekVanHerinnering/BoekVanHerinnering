@@ -171,7 +171,7 @@
     favoritesList.innerHTML = "";
     let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
     if (favorites.length === 0) {
-      favoritesList.innerHTML = "<p>Geen gunsteling verse gestoor nie.</p>";
+      favoritesList.innerHTML = "<p>Double tap on Bible verse to save here.</p>";
       return;
     }
 
