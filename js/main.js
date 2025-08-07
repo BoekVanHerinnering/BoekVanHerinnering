@@ -922,13 +922,24 @@ function getViewMode() {
 
 
 
-let searchTimer;
 const searchBar = document.getElementById('searchBar');
+const loadingIndicator = document.getElementById('loadingIndicator');
+let searchTimer;
 
 searchBar.addEventListener('input', () => {
   clearTimeout(searchTimer);
-  searchTimer = setTimeout(searchBible, 1000);
+
+  // Show loading indicator when typing starts
+  loadingIndicator.classList.remove('hidden');
+
+  searchTimer = setTimeout(() => {
+    searchBible();
+
+    // Hide loading indicator after search finishes
+    loadingIndicator.classList.add('hidden');
+  }, 1000);
 });
+
 
 
 
@@ -1006,12 +1017,6 @@ function navigate(pageId) {
     targetPage.classList.remove('hidden');
   }
 }
-
-
-
-
-
-
 
 
 
