@@ -69,7 +69,7 @@ content: [
 "	54 Hy het Sy kneg JisraEl bygestaan, sodat Hy aan Sy Barmhartigheid sou dink -	",
 "	55 soos Hy tot ons vaders gespreek het - aan Abraham en sy saad tot in ewigheid.	",
 "	56 En Mirjam het by haar omtrent drie maande gebly; en sy het teruggegaan na haar huis toe.	",
-"	Geboorte van JeHôWganan die Wasser/Doper.	",
+
 "	57 EN die tyd dat sy moeder moes word, is vir EliSheba vervul, en sy het ’n seun gebaar.	",
 "	58 En toe haar bure en bloedverwante hoor dat JaHWeH SY Barmhartigheid aan haar groot gemaak het, was hulle saam met haar bly.	",
 "	59 En op die agtste dag het hulle gekom om die kindjie te besny, en hulle wou hom ZekarJaH noem, na die naam van sy vader.	",
@@ -324,21 +324,23 @@ content: [
 "	38 Maar nuwe wyn moet in nuwe sakke gegooi word, en altwee word saam behou.	",
 "	39 En niemand wat ou wyn gedrink het, wil dadelik nuwe hê nie; want hy sê: Die oue is beter.	",
 		
-		
-"	6 EN op die tweede Sabbat na die Pasga het Hy deur die gesaaides geloop, en Sy studente het die are gepluk en met hulle hande uitgevrywe en geëet.	",
-"	2 Toe sê sommige van die Fariseërs vir hulle: Waarom doen julle wat nie ge-oorloof is om op die Sabbat te doen nie?	",
-"	3 En JaHWèshua antwoord en sê vir hulle: Het julle dan nie gelees wat Dawid gedoen het nie - toe hy honger gehad het, hy en die wat by hom was -	",
-"	4 hoe hy in die Huis van Elohim gegaan en die toonbrode geneem en geëet het, en ook aan die wat by hom was, gegee het, wat hulle nie geoorloof was om te eet nie, maar net vir die priesters alleen? [1 ShemuEl 21:6]	",
-"	5 Toe sê Hy vir hulle: Die Seun van die Adam is Meester óók van die Sabbat.	",
-
 ]
 },
 {
 book: 'Lukas',
 chapter: '6',
 content: [
+
+
+"	1 EN op die tweede Sabbat na die Pasga het Hy deur die gesaaides geloop, en Sy studente het die are gepluk en met hulle hande uitgevrywe en geëet.	",
+"	2 Toe sê sommige van die Fariseërs vir hulle: Waarom doen julle wat nie ge-oorloof is om op die Sabbat te doen nie?	",
+"	3 En JaHWèshua antwoord en sê vir hulle: Het julle dan nie gelees wat Dawid gedoen het nie - toe hy honger gehad het, hy en die wat by hom was -	",
+"	4 hoe hy in die Huis van Elohim gegaan en die toonbrode geneem en geëet het, en ook aan die wat by hom was, gegee het, wat hulle nie geoorloof was om te eet nie, maar net vir die priesters alleen? [1 ShemuEl 21:6]	",
+"	5 Toe sê Hy vir hulle: Die Seun van die Adam is Meester óók van die Sabbat.	",
+
+
 	
-"	1 EN op ’n ander Sabbat het Hy in die vergadering gegaan en geleer. En daar was ’n man, en sy regterhand was uitgedor.	",
+"	6 EN op ’n ander Sabbat het Hy in die vergadering gegaan en geleer. En daar was ’n man, en sy regterhand was uitgedor.	",
 "	7 En die skrywers en die Fariseërs het Hom in die oog gehou, of Hy op die Sabbat gesond maak, sodat hulle ’n aanklag teen Hom kon vind.	",
 "	8 Maar Hy het hulle gedagtes geken en vir die man met die verdorde hand gesê: Staan op hier in hul midde. En hy het opgestaan.	",
 "	9 Toe sê JaHWèshua vir hulle: Ek sal aan julle ’n vraag stel: wat is geoorloof op die Sabbat - om goed te doen of kwaad te doen; om ’n siel te red of óm te bring?	",

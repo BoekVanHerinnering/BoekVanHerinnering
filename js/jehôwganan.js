@@ -434,8 +434,7 @@ content: [
 "	8 En weer het Hy neergebuk en op die Aarde geskrywe. [JirmeJaH 17:13]	",
 "	9 En toe hulle dit hoor, het hulle, deur hul gewete bestraf, een vir een weggegaan, van die oudste af tot die laaste toe; en JaHWèshua het alleen agtergebly, en die vrou wat daar tussen hulle in gestaan het.	",
 "	10 En toe JaHWèshua Hom oprig en niemand sien behalwe die vrou nie, sê Hy vir haar: Vrou, waar is daardie beskuldigers van jou? Het niemand jou veroordeel nie?	",
-"	11 En sy antwoord: Niemand nie, Meester. En JaHWèshua sê vir haar: Ek veroordeel jou ook nie. Gaan heen en oortree nie meer die Wet nie.	",
-"	(Hfst 7:53-8:11 kom nie in die oudste manuskripte voor nie nl. Codex Siniaticus, Vaticanus, Alexandrinus, Ephraemi Rescriptus)	",
+"	11 En sy antwoord: Niemand nie, Meester. En JaHWèshua sê vir haar: Ek veroordeel jou ook nie. Gaan heen en oortree nie meer die Wet nie. (Hfst 7:53-8:11 kom nie in die oudste manuskripte voor nie nl. Codex Siniaticus, Vaticanus, Alexandrinus, Ephraemi Rescriptus)	",
 		
 		
 "	12 EN JaHWèshua het weer met hulle gespreek en gesê: EK is die Lig van die wêreld; wie My volg, sal sekerlik nie in die Duisternis wandel nie, maar sal die Lig van die lewe hê.	",
