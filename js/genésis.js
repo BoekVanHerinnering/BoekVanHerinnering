@@ -350,7 +350,6 @@ content: [
 "	7 Kom, laat Ons neerdaal en hulle taal daar verwar, sodat die een die taal van die ander nie kan verstaan nie.	",
 "	8 So het JaHWeH hulle dan daarvandaan oor die aangesig van die hele Aarde verstrooi; en hulle het opgehou om die stad te bou.	",
 "	9 Daarom het hulle dit Babel genoem, want daar het JaHWeH die taal van die hele Aarde verwar, en daarvandaan het JaHWeH hulle oor die hele Aarde verstrooi.	",
-"	Genelyn van Sem.	",
 "	10 DIT is die genelyn van Sem: Toe Sem honderd jaar oud was, het hy die vader van Arpagsad geword, twee jaar na die vloed.	",
 "	11 En Sem het ná die geboorte van Arpagsad nog vyfhonderd jaar gelewe. En hy het seuns en dogters gehad.	",
 "	12 Toe Arpagsad vyf-en-dertig jaar oud was, het hy die vader van Selag geword.	",
