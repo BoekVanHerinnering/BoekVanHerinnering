@@ -212,6 +212,7 @@ content: [
 "	10 en betoon Barmhartigheid met duisende van die wat My liefhet en My Gebooie onderhou.	",
 "	11 Jy mag die Naam van JaHWeH jou Elohey nie verydel nie, want JaHWeH sal die een wat Sy Naam verydel, nie ongestraf laat bly nie.	",
 "	12 Onderhou die Sabbatdag deur dit apart te stel, soos JaHWeH jou Elohey jou beveel het ,	",
+"   13  Ses dae moet jy arbei en al jou werk doen",
 "	14 maar die sewende dag is die Sabbat van JaHWeH jou Elohey; [dan] mag jy géén werk doen nie - jy of jou seun of jou dogter, of jou dienskneg of jou diensmaagd, of jou os of jou esel of enige dier van jou, of jou besoeker wat in jou poorte is nie; sodat jou dienskneg en jou diensmaagd kan rus soos jy.	",
 "	15 En jy moet daaraan dink dat jy in die Aarde van Egipte ’n slaaf was, en JaHWeH jou Elohey jou daarvandaan uitgelei het deur ’n Sterke Hand en ’n Uitgestrekte Arm; daarom het JaHWeH jou Elohey jou beveel om die Sabbatdag te doen.	",
 "	16 Eer jou vader en jou moeder soos JaHWeH jou Elohey jou beveel het, dat jou dae verleng mag word en dat dit met jou goed mag gaan in die Adamah[adamiet se Aarde] wat JaHWeH jou Elohey aan jou gee.	",
