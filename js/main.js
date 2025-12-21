@@ -1811,4 +1811,26 @@ function showJubileumComment() {
 
 
 
+let wakeLock = null;
+
+async function keepScreenAwake() {
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+
+    wakeLock.addEventListener('release', () => {
+      console.log('Screen Wake Lock released');
+    });
+
+    console.log('Screen Wake Lock active');
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+}
+
+// Re-request when page becomes visible again
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    keepScreenAwake();
+  }
+});
 
