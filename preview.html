@@ -407,25 +407,40 @@
 
     // share
     shareBtn.addEventListener("click", () => {
-      html2canvas(verseCard, { scale: 2, useCORS: true }).then(canvas => {
-        canvas.toBlob(async blob => {
-          const file = new File([blob], "verse.png", { type: "image/png" });
-          if (navigator.canShare && navigator.canShare({ files: [file] })) {
-            try {
-              await navigator.share({
-                files: [file],
-                title: "Verse",
-                text: "Shared from Die Boek Van Herinnering",
-              });
-            } catch (err) {
-              alert("Sharing failed or canceled.");
-            }
-          } else {
-            alert("Sharing not supported on this device.");
-          }
-        });
-      });
+  html2canvas(verseCard, { scale: 2, useCORS: true }).then(canvas => {
+    canvas.toBlob(async blob => {
+      const file = new File([blob], "verse.png", { type: "image/png" });
+
+      // ✅ Try modern share (works in Chrome or web version)
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: "📖 Verse from Die Boek Van Herinnering",
+            text: "Shared from Die Boek Van Herinnering",
+          });
+          return;
+        } catch (err) {
+          console.warn("Web share canceled or failed:", err);
+        }
+      }
+
+      // 🚫 Fallback for APKs or browsers without share support
+      const imageUrl = URL.createObjectURL(blob);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = imageUrl;
+      downloadLink.download = "verse.png";
+      downloadLink.click();
+
+      alert(
+        "Sharing not available on this device.\n\n" +
+        "📥 The verse image has been saved to your downloads.\n" +
+        "You can now open it from your gallery or downloads and share it manually."
+      );
     });
+  });
+});
+
 
     // slider sync
     pageScrollSlider.addEventListener('input', () => {
