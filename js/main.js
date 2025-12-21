@@ -1,5 +1,5 @@
   const updateUrl = "https://boekvanherinnering.github.io/bibleapp/update-message.json";
-  const currentAppVersion = "1.4"; // This must match your app version
+  const currentAppVersion = "1.5"; // This must match your app version
 
 
   
