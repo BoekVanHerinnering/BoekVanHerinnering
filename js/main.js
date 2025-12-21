@@ -87,6 +87,30 @@ document.addEventListener('visibilitychange', () => {
 
 
 
+document.addEventListener('deviceready', function() {
+    document.getElementById('shareBtn').onclick = () => {
+        const canvas = document.getElementById('previewCanvas'); // or your html2canvas canvas
+        canvas.toBlob(blob => {
+            const fileName = 'verse.png';
+            const storagePath = cordova.file.cacheDirectory;
+            window.resolveLocalFileSystemURL(storagePath, dir => {
+                dir.getFile(fileName, { create: true }, file => {
+                    file.createWriter(writer => {
+                        writer.write(blob);
+                        const filePath = file.toURL();
+                        window.plugins.socialsharing.share(
+                            'Check out this verse!',
+                            'Die Boek Van Herinnering',
+                            filePath
+                        );
+                    });
+                });
+            });
+        });
+    };
+}, false);
+
+
 
 
 
