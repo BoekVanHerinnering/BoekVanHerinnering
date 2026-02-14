@@ -1,7 +1,21 @@
   const updateUrl = "https://boekvanherinnering.github.io/bibleapp/update-message.json";
   const currentAppVersion = "1.5"; // This must match your app version
 
+  let wakeLock = null;
 
+ async function keepScreenAwake() {
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+
+    wakeLock.addEventListener('release', () => {
+      console.log('Screen Wake Lock released');
+    });
+
+    console.log('Screen Wake Lock active');
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+ }
   
   fetch(updateUrl)
     .then(res => res.json())
@@ -61,21 +75,7 @@ closeMenuBtn.addEventListener('click', () => {
 
 
 
-let wakeLock = null;
 
-async function keepScreenAwake() {
-  try {
-    wakeLock = await navigator.wakeLock.request('screen');
-
-    wakeLock.addEventListener('release', () => {
-      console.log('Screen Wake Lock released');
-    });
-
-    console.log('Screen Wake Lock active');
-  } catch (err) {
-    console.error(`${err.name}, ${err.message}`);
-  }
-}
 
 // Re-request when page becomes visible again
 document.addEventListener('visibilitychange', () => {
